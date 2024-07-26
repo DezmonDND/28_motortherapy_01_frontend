@@ -1,0 +1,34 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__list {
+  display: grid;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 32px;
+  list-style: none;
+}
+
+.navigation__item {
+  font-weight: 700;
+  font-size: 20px;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+.navigation__item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgba(15, 218, 206, 1);
+  transform: scale(1.1);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 auto;
+}

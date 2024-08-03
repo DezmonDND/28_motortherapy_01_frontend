@@ -1,0 +1,83 @@
+.contactUs {
+  margin-top: 128px;
+}
+
+.contactUs__title {
+  margin: 30px 0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
+.contactUs__form {
+  background-color: #ececec;
+  max-width: 1324px;
+  border-radius: 30px;
+}
+.form__content {
+  max-width: 1098px;
+  margin: auto;
+}
+.form__data {
+  display: flex;
+  column-gap: 39px;
+}
+
+.form__block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+  margin-top: 28px;
+}
+.form__input-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.form__input {
+  height: 46px;
+  padding: 0;
+  border: 1px solid #afafaf;
+  border-radius: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 12px;
+}
+
+.form__input_name {
+  width: 326px;
+}
+.form__input_phone {
+  width: 326px;
+}
+.form__input_e-mail {
+  width: 326px;
+}
+.form__input_comment {
+  border: 1px solid #afafaf;
+  border-radius: 15px;
+  height: 155px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 12px;
+}
+
+.form__button {
+  border-radius: 15px;
+  background-color: #0fdace;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  border: none;
+  padding: 16px 32px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  margin-left: 113px;
+}
+
+.form__button:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}

@@ -1,15 +1,26 @@
 import React from "react";
 import "./Navigation.css";
+import { HashLink } from "react-router-hash-link";
 
 function Navigation() {
   return (
     <header className="navigation">
       <ul className="navigation__list">
-        <li className="navigation__item">О нас</li>
-        <li className="navigation__item">Мероприятия</li>
-        <li className="navigation__item">Контакты</li>
-        <li className="navigation__item">Как помочь</li>
-        <li className="navigation__item">Друзья</li>
+        <HashLink to="#aboutUs" className="navigation__item">
+          О нас
+        </HashLink>
+        <HashLink to="#aboutUs" className="navigation__item">
+          Мероприятия
+        </HashLink>
+        <HashLink to="#contactUs" className="navigation__item">
+          Контакты
+        </HashLink>
+        <HashLink to="#helpUs" className="navigation__item">
+          Как помочь
+        </HashLink>
+        <HashLink to="#friends" className="navigation__item">
+          Друзья
+        </HashLink>
       </ul>
     </header>
   );

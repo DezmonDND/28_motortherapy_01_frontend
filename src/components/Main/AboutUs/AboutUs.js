@@ -3,7 +3,7 @@ import AboutUsPhoto from "./images/photo-about-us.jpg"
 
 function AboutUs() {
   return (
-    <div className="about-us">
+    <div className="about-us" id="aboutUs">
       <div className="about-us-text">
         <h2 className="about-us__title">О нас</h2>
         <p className="about-us__paragraph">

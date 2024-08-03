@@ -9,6 +9,7 @@ import HelpUs from "./Main/HelpUs/HelpUs";
 import Friends from "./Main/Friends/Friends";
 import Footer from "./Main/Footer/Footer";
 import ContactUs from "./Main/ContactUs/ContactUs";
+import Events from "./Main/Events/Events";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
         <Promo />
         <AboutUs />
         <OurAchievements />
-        <ContactUs/>
+        <Events />
+        <ContactUs />
         <HelpUs />
-        <Friends/>
+        <Friends />
       </main>
       <Footer></Footer>
     </>

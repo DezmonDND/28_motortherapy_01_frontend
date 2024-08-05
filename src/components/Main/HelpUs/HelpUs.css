@@ -38,3 +38,17 @@
   font-size: 26px;
   line-height: 32px;
 }
+
+@media screen and (max-width: 900px) {
+  .helpUs__content {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .helpUs__content {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}

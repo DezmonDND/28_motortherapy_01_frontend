@@ -1,7 +1,7 @@
 .footer {
   background-color: #0fdace;
   color: #000000;
-  max-height: 357px;
+
   height: 100%;
   display: flex;
 }
@@ -61,4 +61,10 @@
 .footer__link:hover {
     opacity: 0.5;
     transition: 0.5s;
+}
+
+@media screen and (max-width: 500px) {
+  .footer__content {
+    flex-direction: column;
+  }
 }

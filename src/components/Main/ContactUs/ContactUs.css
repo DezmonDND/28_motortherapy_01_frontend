@@ -18,8 +18,9 @@
   margin: auto;
 }
 .form__data {
-  display: flex;
+  display: grid;
   column-gap: 39px;
+  grid-template-columns: auto auto auto;
 }
 
 .form__block {
@@ -80,4 +81,30 @@
 .form__button:hover {
   transition: 0.5s;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 1400px) {
+  .form__data {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form__data {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form__input_name {
+    width: 250px;
+  }
+
+  .form__input_phone {
+    width: 250px;
+  }
+
+  .form__input_e-mail {
+    width: 250px;
+  }
 }

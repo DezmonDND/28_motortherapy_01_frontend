@@ -59,3 +59,9 @@
   object-fit: contain;
   overflow: hidden;
 }
+
+@media screen and (max-width: 900px) {
+  .about-us {
+flex-direction: column;
+  }
+}

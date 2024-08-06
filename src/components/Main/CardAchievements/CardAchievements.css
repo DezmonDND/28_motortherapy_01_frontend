@@ -22,3 +22,28 @@
   letter-spacing: 0%;
   text-align: center;
 }
+
+@media screen and (max-width: 1000px) {
+  .card-achievements {
+margin-top: 60px;
+
+  }
+  .card-achievements__paragraph {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card-achievements__paragraph {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .card-achievements__img {
+    width: 70px;
+    height: 70px;
+  }
+  .card-achievements {
+    max-width: 220px;
+  }
+  }

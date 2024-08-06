@@ -3,7 +3,7 @@ import AboutUsPhoto from "./images/photo-about-us.jpg"
 
 function AboutUs() {
   return (
-    <div className="about-us">
+    <div className="about-us" id="aboutUs">
       <div className="about-us-text">
         <h2 className="about-us__title">О нас</h2>
         <p className="about-us__paragraph">
@@ -16,11 +16,11 @@ function AboutUs() {
         <p className="about-us__paragraph">
           Исполнение мечт — наш конёк.
         </p>
+      </div>
+      <img className="about-us__photo" src={AboutUsPhoto} alt="наша фотография" />
         <button className="about-us__button">
           Связаться с нами
         </button>
-      </div>
-      <img className="about-us__photo" src={AboutUsPhoto} alt="наша фотография" />
     </div>
   )
 }

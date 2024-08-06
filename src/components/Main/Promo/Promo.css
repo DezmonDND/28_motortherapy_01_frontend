@@ -2,6 +2,7 @@
   color: rgb(0, 0, 0);
   width: 100%;
   height: 700px;
+  position: relative;
 }
 
 .promo-background {
@@ -26,6 +27,9 @@
 
 .promo-container {
   width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .promo-info {
@@ -92,4 +96,110 @@
   border: rgba(15, 218, 206, 0.7), 1px, solid;
   box-shadow: 0 0 10px rgba(15, 218, 206, 0.7);
   text-shadow: 0 0 10px rgba(15, 218, 206, 0.7);
+}
+
+@media screen and (max-width: 1440px) {
+  .promo-container {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .promo {
+    height: 447px;
+  }
+
+  .promo-info {
+    margin-top: 82px;
+  }
+
+  .promo-background {
+    max-height: 447px;
+  }
+  .promo-container {
+    margin-left: 53px;
+  }
+
+  .promo-info__title {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .promo-info__subtitle {
+    font-size: 21px;
+    line-height: 25px;
+    text-align: left;
+  }
+
+  .promo-buttons__button {
+    margin-right: 18px;
+  }
+
+  .promo-buttons__button:last-child {
+    padding: 16px 52px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .promo-container {
+    position: relative;
+    margin: 0 8px;
+  }
+
+  .promo-info__title {
+    font-size: 36px;
+  }
+
+  .promo-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .promo {
+    overflow: hidden;
+    height: 510px;
+  }
+
+  .promo-info {
+    width: max-content;
+  }
+
+  .promo-background {
+    position: relative;
+    top: -163px;
+    background-image: url(../../../assets/images/preview_320.png);
+    background-size: contain;
+  }
+
+  .promo-container {
+    top: -415px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-info__subtitle {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    margin-top: 2px;
+  }
+
+  .promo-buttons {
+    width: max-content;
+    margin-top: 29px;
+    gap: 20px;
+  }
+
+  .promo-buttons__button {
+    margin-right: 0;
+    padding: 19px 58px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+  }
 }

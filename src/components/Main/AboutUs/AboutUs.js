@@ -16,11 +16,11 @@ function AboutUs() {
         <p className="about-us__paragraph">
           Исполнение мечт — наш конёк.
         </p>
+      </div>
+      <img className="about-us__photo" src={AboutUsPhoto} alt="наша фотография" />
         <button className="about-us__button">
           Связаться с нами
         </button>
-      </div>
-      <img className="about-us__photo" src={AboutUsPhoto} alt="наша фотография" />
     </div>
   )
 }

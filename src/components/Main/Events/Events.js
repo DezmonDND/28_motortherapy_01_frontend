@@ -20,7 +20,7 @@ function Events() {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1440,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -29,7 +29,7 @@ function Events() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 998,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -37,7 +37,7 @@ function Events() {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 586,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

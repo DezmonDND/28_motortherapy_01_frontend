@@ -24,10 +24,10 @@ function ContactUs() {
               </div>
               <div className="form__block">
                 <label className="form__input-name">Электронная почта:</label>
-                <input
+                <textarea
                   className="form__input form__input_e-mail"
                   placeholder="Введите электронную почту"
-                ></input>
+                ></textarea>
               </div>
             </div>
             <div className="form__block">
@@ -39,7 +39,7 @@ function ContactUs() {
             </div>
           </div>
           <button className="form__button" type="submit">
-            Отправить
+          Связаться с нами
           </button>
         </form>
       </div>

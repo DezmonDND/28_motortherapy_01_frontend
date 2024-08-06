@@ -29,4 +29,45 @@
   max-width: 1316px;
   max-height: 298px;
   height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  .friends {
+    margin: 131px 30px 184px;
+  }
+  .friends__image {
+    width: 194px;
+  }
+  .firends__button {
+    display: none;
+  }
+
+  .friends__slider {
+    margin-top: 49px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .friends {
+    margin: 74px 65px 132px;
+  }
+
+  .friends__title {
+    text-align: center;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 36px;
+  }
+
+  .firends__button {
+    display: none;
+  }
+
+  .friends__image {
+    width: 191px;
+  }
+  .friends__slider {
+    gap: 10px;
+  }
 }

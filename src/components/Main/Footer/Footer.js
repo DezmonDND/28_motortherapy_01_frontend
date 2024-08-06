@@ -35,7 +35,7 @@ function Footer() {
             <h3 className="footer__links-title">Контакты </h3>
             <div className="footer__contacts">
               <p className="footer__contact">+7 999 888-77-66</p>
-              <p className="footer__contact">motoemotions@motoemotions.ru</p>
+              <p className="footer__contact">motoemotions@mail.ru</p>
               <div className="footer__socials">
                 <Link to="/">
                   <img className="footer__icon" src={IconVk} alt="VK"></img>

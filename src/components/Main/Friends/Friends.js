@@ -13,26 +13,36 @@ function Friends() {
     slidesToScroll: 4,
     initialSlide: 0,
     arrows: false,
+    dotsClass: "my-dots",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 2,
           initialSlide: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 868,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 656,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -48,19 +58,19 @@ function Friends() {
       <div className="friends__slider">
         <Slider {...settings}>
           <div>
-            <img src={Logo} alt="slide-1" />
+            <img className="friends__image" src={Logo} alt="slide-1" />
           </div>
           <div>
-            <img src={Logo} alt="slide-2" />
+            <img className="friends__image" src={Logo} alt="slide-2" />
           </div>
           <div>
-            <img src={Logo} alt="slide-3" />
+            <img className="friends__image" src={Logo} alt="slide-3" />
           </div>
           <div>
-            <img src={Logo} alt="slide-3" />
+            <img className="friends__image" src={Logo} alt="slide-3" />
           </div>
           <div>
-            <img src={Logo} alt="slide-3" />
+            <img className="friends__image" src={Logo} alt="slide-3" />
           </div>
         </Slider>
       </div>

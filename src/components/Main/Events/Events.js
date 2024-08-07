@@ -6,9 +6,13 @@ import EventIcon1 from "../../../assets/images/events_icon1.png";
 import EventIcon2 from "../../../assets/images/events_icon2.png";
 import EventIcon3 from "../../../assets/images/events_icon3.png";
 import EventIcon4 from "../../../assets/images/events_icon4.png";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../../Modal/Modal";
 
 function Events() {
+const [modal, setModal] = useState(false);
+const [modalInfo, setModalInfo] = useState({});
+
   const settings = {
     dots: true,
     infinite: false,
@@ -46,6 +50,15 @@ function Events() {
     ],
   };
 
+  const handleOpenModal = (eventInfo) => {
+    setModalInfo(eventInfo);
+    setModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setModal(false);
+  };
+
   return (
     <section className="events">
       <h2 className="events__title">Мероприятия</h2>
@@ -56,44 +69,45 @@ function Events() {
             <img src={EventIcon1} alt="slide-1" className="events__icon" />
             <p className="events__date">17 сентября 2022</p>
             <p className="events__name">День добрых дел в Гатчине</p>
-            <Link to="" className="events__link">
+            <button onClick={() => handleOpenModal({ date: "17 сентября 2022", name: "День добрых дел в Гатчине", icon: EventIcon1 })} className="events__link">
               Смотреть
-            </Link>
+            </button>
           </div>
           <div className="events__block">
             <img src={EventIcon2} alt="slide-1" className="events__icon" />
             <p className="events__date">30 июля 2022</p>
-            <p className="events__name">МотоЭмоции в Всеволожске</p>
-            <Link to="" className="events__link">
+            <p className="events__name">МотоЭмоции в Всеволожске</p>
+            <button onClick={() => handleOpenModal({ date: "30 июля 2022", name: "МотоЭмоции в Всеволожске", icon: EventIcon2 })} className="events__link">
               Смотреть
-            </Link>
-          </div>{" "}
+            </button>
+          </div>
           <div className="events__block">
             <img src={EventIcon3} alt="slide-1" className="events__icon" />
             <p className="events__date">25 июня 2022</p>
             <p className="events__name">Хоспис Токсово</p>
-            <Link to="" className="events__link">
+            <button onClick={() => handleOpenModal({ date: "25 июня 2022", name: "Хоспис Токсово", icon: EventIcon3 })} className="events__link">
               Смотреть
-            </Link>
-          </div>{" "}
+            </button>
+          </div>
           <div className="events__block">
             <img src={EventIcon4} alt="slide-1" className="events__icon" />
             <p className="events__date">17 сентября 2022</p>
             <p className="events__name">День добрых дел в Гатчине</p>
-            <Link to="" className="events__link">
+            <button onClick={() => handleOpenModal({ date: "17 сентября 2022", name: "День добрых дел в Гатчине", icon: EventIcon4 })} className="events__link">
               Смотреть
-            </Link>
-          </div>{" "}
+            </button>
+          </div>
           <div className="events__block">
             <img src={EventIcon1} alt="slide-1" className="events__icon" />
             <p className="events__date">17 сентября 2022</p>
             <p className="events__name">День добрых дел в Гатчине</p>
-            <Link to="" className="events__link">
+            <button onClick={() => handleOpenModal({ date: "17 сентября 2022", name: "День добрых дел в Гатчине", icon: EventIcon1 })} className="events__link">
               Смотреть
-            </Link>
+            </button>
           </div>
         </Slider>
       </div>
+      {modal && <Modal info={modalInfo} onClose={handleCloseModal} />}
     </section>
   );
 }

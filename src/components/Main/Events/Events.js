@@ -10,8 +10,8 @@ import { useState } from "react";
 import Modal from "../../Modal/Modal";
 
 function Events() {
-const [modal, setModal] = useState(false);
-const [modalInfo, setModalInfo] = useState({});
+  const [modal, setModal] = useState(false);
+  const [modalInfo, setModalInfo] = useState({});
 
   const settings = {
     dots: true,
@@ -60,7 +60,7 @@ const [modalInfo, setModalInfo] = useState({});
   };
 
   return (
-    <section className="events">
+    <section className="events" id="events">
       <h2 className="events__title">Мероприятия</h2>
       <button className="events__button">Смотреть все</button>
       <div className="events__content">
@@ -69,7 +69,16 @@ const [modalInfo, setModalInfo] = useState({});
             <img src={EventIcon1} alt="slide-1" className="events__icon" />
             <p className="events__date">17 сентября 2022</p>
             <p className="events__name">День добрых дел в Гатчине</p>
-            <button onClick={() => handleOpenModal({ date: "17 сентября 2022", name: "День добрых дел в Гатчине", icon: EventIcon1 })} className="events__link">
+            <button
+              onClick={() =>
+                handleOpenModal({
+                  date: "17 сентября 2022",
+                  name: "День добрых дел в Гатчине",
+                  icon: EventIcon1,
+                })
+              }
+              className="events__link"
+            >
               Смотреть
             </button>
           </div>
@@ -77,7 +86,16 @@ const [modalInfo, setModalInfo] = useState({});
             <img src={EventIcon2} alt="slide-1" className="events__icon" />
             <p className="events__date">30 июля 2022</p>
             <p className="events__name">МотоЭмоции в Всеволожске</p>
-            <button onClick={() => handleOpenModal({ date: "30 июля 2022", name: "МотоЭмоции в Всеволожске", icon: EventIcon2 })} className="events__link">
+            <button
+              onClick={() =>
+                handleOpenModal({
+                  date: "30 июля 2022",
+                  name: "МотоЭмоции в Всеволожске",
+                  icon: EventIcon2,
+                })
+              }
+              className="events__link"
+            >
               Смотреть
             </button>
           </div>
@@ -85,7 +103,16 @@ const [modalInfo, setModalInfo] = useState({});
             <img src={EventIcon3} alt="slide-1" className="events__icon" />
             <p className="events__date">25 июня 2022</p>
             <p className="events__name">Хоспис Токсово</p>
-            <button onClick={() => handleOpenModal({ date: "25 июня 2022", name: "Хоспис Токсово", icon: EventIcon3 })} className="events__link">
+            <button
+              onClick={() =>
+                handleOpenModal({
+                  date: "25 июня 2022",
+                  name: "Хоспис Токсово",
+                  icon: EventIcon3,
+                })
+              }
+              className="events__link"
+            >
               Смотреть
             </button>
           </div>
@@ -93,7 +120,16 @@ const [modalInfo, setModalInfo] = useState({});
             <img src={EventIcon4} alt="slide-1" className="events__icon" />
             <p className="events__date">17 сентября 2022</p>
             <p className="events__name">День добрых дел в Гатчине</p>
-            <button onClick={() => handleOpenModal({ date: "17 сентября 2022", name: "День добрых дел в Гатчине", icon: EventIcon4 })} className="events__link">
+            <button
+              onClick={() =>
+                handleOpenModal({
+                  date: "17 сентября 2022",
+                  name: "День добрых дел в Гатчине",
+                  icon: EventIcon4,
+                })
+              }
+              className="events__link"
+            >
               Смотреть
             </button>
           </div>
@@ -101,7 +137,16 @@ const [modalInfo, setModalInfo] = useState({});
             <img src={EventIcon1} alt="slide-1" className="events__icon" />
             <p className="events__date">17 сентября 2022</p>
             <p className="events__name">День добрых дел в Гатчине</p>
-            <button onClick={() => handleOpenModal({ date: "17 сентября 2022", name: "День добрых дел в Гатчине", icon: EventIcon1 })} className="events__link">
+            <button
+              onClick={() =>
+                handleOpenModal({
+                  date: "17 сентября 2022",
+                  name: "День добрых дел в Гатчине",
+                  icon: EventIcon1,
+                })
+              }
+              className="events__link"
+            >
               Смотреть
             </button>
           </div>

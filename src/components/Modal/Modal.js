@@ -1,23 +1,22 @@
-import React, { useEffect, useRef } from 'react';
-import Slider from 'react-slick';
+import React, { useEffect, useRef } from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Modal.css";
-import closeButton from "../../assets/images/close-button.png"
-import motoPhoto from "../../assets/images/moto.jpg"
-import motoPhoto2 from "../../assets/images/moto2.png"
-
+import closeButton from "../../assets/images/close-button.png";
+import motoPhoto from "../../assets/images/moto.jpg";
+import motoPhoto2 from "../../assets/images/moto2.png";
 
 function Modal({ info, onClose }) {
-
   const modalRef = useRef();
 
   // Функция для форматирования текста с сервера
   const formatText = (text) => {
-    return text.split('\n').map((item, index) => (
+    return text.split("\n").map((item, index) => (
       <React.Fragment key={index}>
         {item}
-        <br /><br />
+        <br />
+        <br />
       </React.Fragment>
     ));
   };
@@ -33,11 +32,10 @@ function Modal({ info, onClose }) {
     arrows: false,
   };
 
-  
   // Добавляем обработчик событий для закрытия модального окна по нажатию Esc и клику вне модального окна
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         onClose();
       }
     };
@@ -48,13 +46,13 @@ function Modal({ info, onClose }) {
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("mousedown", handleClickOutside);
 
     // Удаляем обработчики событий при размонтировании компонента
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [onClose]);
 
@@ -62,19 +60,24 @@ function Modal({ info, onClose }) {
     <div className="modal" ref={modalRef}>
       <div className="modal__content">
         <button onClick={onClose} className="modal__close-button">
-          <img src={closeButton} className="modal__close-button-img" alt="закрыть" />
+          <img
+            src={closeButton}
+            className="modal__close-button-img"
+            alt="закрыть"
+          />
         </button>
         <h2 className="modal__title">{info.name}</h2>
-        <div className='modal__container'>
-          <iframe className='modal__video'
+        <div className="modal__container">
+          <iframe
+            className="modal__video"
             width="645"
             height="409"
             src="https://www.youtube.com/embed/OQmXrKPeOVo?si=3ul0ve2vLT7y5hhh"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen>
-          </iframe>
+            allowFullScreen
+          ></iframe>
           <Slider {...settings} className="modal__slider">
             <img className="modal__slide" src={motoPhoto} alt={info.name} />
             <img className="modal__slide" src={motoPhoto2} alt={info.name} />
@@ -97,8 +100,8 @@ function Modal({ info, onClose }) {
 За полные животики от вкуснейших пицц огромное спасибо нашим друзьям - «BERR HOUSE»!`)}
         </p>
         <button onClick={onClose} className="modal__back-button">
-              Назад
-            </button>
+          Назад
+        </button>
       </div>
     </div>
   );

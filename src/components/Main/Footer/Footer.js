@@ -17,7 +17,7 @@ function Footer() {
               <HashLink to="#aboutUs" className="footer__link">
                 О нас
               </HashLink>
-              <HashLink to="#aboutUs" className="footer__link">
+              <HashLink to="#events" className="footer__link">
                 Мероприятия
               </HashLink>
               <HashLink to="#contactUs" className="footer__link">
@@ -37,17 +37,17 @@ function Footer() {
               <p className="footer__contact">+7 999 888-77-66</p>
               <p className="footer__contact">motoemotions@mail.ru</p>
               <div className="footer__socials">
-                <Link to="/">
+                <Link to="/" target="blank">
                   <img className="footer__icon" src={IconVk} alt="VK"></img>
                 </Link>
-                <Link to="/">
+                <Link to="/" target="blank">
                   <img
                     className="footer__icon"
                     src={IconTg}
                     alt="Telegram"
                   ></img>
                 </Link>
-                <Link to="/">
+                <Link to="/" target="blank">
                   <img
                     className="footer__icon"
                     src={IconWp}

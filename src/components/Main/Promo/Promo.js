@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Promo.css";
+import { HashLink } from "react-router-hash-link";
 
 function Promo() {
   return (
@@ -22,10 +23,15 @@ function Promo() {
           </h3>
         </div>
         <div className="promo-buttons">
-          <button className="promo-buttons__button promo-buttons__button_color">
+          <HashLink
+            className="promo-buttons__button promo-buttons__button_color"
+            to="#events"
+          >
             Принять участие
-          </button>
-          <button className="promo-buttons__button">Помочь</button>
+          </HashLink>
+          <HashLink className="promo-buttons__button" to="#helpUs">
+            Помочь
+          </HashLink>
         </div>
       </div>
     </div>

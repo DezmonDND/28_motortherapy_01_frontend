@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Footer.css";
 import { HashLink } from "react-router-hash-link";
 import IconVk from "../../../assets/images/vk_icon.svg";
@@ -60,7 +59,7 @@ function Footer() {
           <div className="footer__develop">
             <h3 className="footer__links-title">Разработка сайта</h3>
             <p className="footer__text">Политика конфиденциальности</p>
-            <p className="footer__text">Все права защищены © 2022</p>
+            <p className="footer__text">Все права защищены © 2024</p>
           </div>
         </div>
       </div>

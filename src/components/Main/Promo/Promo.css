@@ -59,6 +59,7 @@
 .promo-buttons {
   display: flex;
   margin-top: 78px;
+
 }
 
 .promo-buttons__button {
@@ -69,6 +70,8 @@
   padding: 16px 32px;
   border-radius: 15px;
   transition: 0.3s;
+  text-decoration: none;
+  color: #000;
 }
 
 .promo-buttons__button:hover {

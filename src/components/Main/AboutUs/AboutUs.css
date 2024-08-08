@@ -43,6 +43,8 @@
   transition: 0.3s;
   background-color: rgba(15, 218, 206, 1);
   bottom: 0;
+  text-decoration: none;
+  color: #000;
 }
 
 .about-us__button:hover {

@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "./Friends.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Logo from "../../../assets/images/logo.png";
+import { FRIENDS } from "../../../mocks/user-data";
 
 function Friends() {
   const settings = {
@@ -57,21 +57,15 @@ function Friends() {
       <button className="firends__button">Смотреть все</button>
       <div className="friends__slider">
         <Slider {...settings}>
-          <div>
-            <img className="friends__image" src={Logo} alt="slide-1" />
-          </div>
-          <div>
-            <img className="friends__image" src={Logo} alt="slide-2" />
-          </div>
-          <div>
-            <img className="friends__image" src={Logo} alt="slide-3" />
-          </div>
-          <div>
-            <img className="friends__image" src={Logo} alt="slide-3" />
-          </div>
-          <div>
-            <img className="friends__image" src={Logo} alt="slide-3" />
-          </div>
+          {FRIENDS.map((friend) => (
+            <div key={friend.id}>
+              <img
+                className="friends__image"
+                src={friend.icon}
+                alt={friend.description}
+              />
+            </div>
+          ))}
         </Slider>
       </div>
     </section>

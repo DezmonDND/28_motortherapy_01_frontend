@@ -10,6 +10,12 @@
   line-height: 39px;
 }
 
+.friends__image {
+  width: 305px;
+  height: 305px;
+  object-fit: contain;
+}
+
 .firends__button {
   all: unset;
   margin: 8px 0 23px 0;
@@ -37,7 +43,8 @@
     margin: 131px 30px 184px;
   }
   .friends__image {
-    width: 194px;
+    width: 220px;
+    height: 220px;
   }
   .firends__button {
     display: none;

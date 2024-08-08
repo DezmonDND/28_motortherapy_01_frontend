@@ -37,23 +37,23 @@ function Footer() {
               <p className="footer__contact">+7 999 888-77-66</p>
               <p className="footer__contact">motoemotions@mail.ru</p>
               <div className="footer__socials">
-                <Link to="/" target="blank">
+                <a href="https://vk.com/mototerapiya" target="newBlank">
                   <img className="footer__icon" src={IconVk} alt="VK"></img>
-                </Link>
-                <Link to="/" target="blank">
+                </a>
+                <a href="/" target="newBlank">
                   <img
                     className="footer__icon"
                     src={IconTg}
                     alt="Telegram"
                   ></img>
-                </Link>
-                <Link to="/" target="blank">
+                </a>
+                <a href="/" target="newBlank">
                   <img
                     className="footer__icon"
                     src={IconWp}
                     alt="Whatsapp"
                   ></img>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

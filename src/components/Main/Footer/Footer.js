@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Footer.css";
 import { HashLink } from "react-router-hash-link";
 import IconVk from "../../../assets/images/vk_icon.svg";
@@ -17,7 +16,7 @@ function Footer() {
               <HashLink to="#aboutUs" className="footer__link">
                 О нас
               </HashLink>
-              <HashLink to="#aboutUs" className="footer__link">
+              <HashLink to="#events" className="footer__link">
                 Мероприятия
               </HashLink>
               <HashLink to="#contactUs" className="footer__link">
@@ -35,32 +34,32 @@ function Footer() {
             <h3 className="footer__links-title">Контакты </h3>
             <div className="footer__contacts">
               <p className="footer__contact">+7 999 888-77-66</p>
-              <p className="footer__contact">motoemotions@motoemotions.ru</p>
+              <p className="footer__contact">motoemotions@mail.ru</p>
               <div className="footer__socials">
-                <Link to="/">
+                <a href="https://vk.com/mototerapiya" target="newBlank">
                   <img className="footer__icon" src={IconVk} alt="VK"></img>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/" target="newBlank">
                   <img
                     className="footer__icon"
                     src={IconTg}
                     alt="Telegram"
                   ></img>
-                </Link>
-                <Link to="/">
+                </a>
+                <a href="/" target="newBlank">
                   <img
                     className="footer__icon"
                     src={IconWp}
                     alt="Whatsapp"
                   ></img>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
           <div className="footer__develop">
             <h3 className="footer__links-title">Разработка сайта</h3>
             <p className="footer__text">Политика конфиденциальности</p>
-            <p className="footer__text">Все права защищены © 2022</p>
+            <p className="footer__text">Все права защищены © 2024</p>
           </div>
         </div>
       </div>

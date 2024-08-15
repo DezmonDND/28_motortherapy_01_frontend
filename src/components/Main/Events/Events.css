@@ -24,12 +24,16 @@
   margin: 0 0 8px;
 }
 .events__block {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
   max-width: 305px;
   width: 100%;
   max-height: 515px;
   height: 100%;
   margin-bottom: 10px;
   margin-top: 0;
+  margin: 0 auto 10px;
 }
 .events__icon {
   max-width: 305px;
@@ -59,7 +63,7 @@
   border: 1px solid #0fdace;
   border-radius: 15px;
   padding: 9px 91px;
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .events__link:hover {
@@ -113,7 +117,7 @@
 
 .my-dots li button:before {
   font-family: "slick";
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -131,4 +135,64 @@
 .my-dots li.slick-active button:before {
   opacity: 0.75;
   color: #0fdace;
+}
+
+@media screen and (max-width: 1440px) {
+  .events {
+    margin: 161px 30px 0;
+  }
+
+  .events__button {
+    display: none;
+  }
+
+  .events__icon {
+    width: 305px;
+    height: 372px;
+  }
+  .events__title {
+    margin: 0 0 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .events {
+    margin: 89px 32px 0;
+  }
+
+  .events__block {
+    margin-top: 24px;
+  }
+  .events__title {
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .events__button {
+    display: none;
+  }
+
+  .events__icon {
+    max-width: 256px;
+    max-height: 312px;
+  }
+
+  .events__content {
+  }
+
+  .events__name {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .events__link {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 9px 67px;
+  }
+
+  .my-dots {
+    bottom: -45px;
+  }
 }

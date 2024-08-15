@@ -6,7 +6,7 @@ import MoneyIcon from "../../../assets/images/money_icon.svg";
 function HelpUs() {
   return (
     <section className="helpUs" id="helpUs">
-      <h2 className="helpUs__title">Как помочь</h2>
+      <h2 className="helpUs__title">Помочь нам</h2>
       <ul className="helpUs__content">
         <li className="helpUs__info">
           <img src={MotoIcon} alt="Мотоцикл" className="helpUs__image"></img>

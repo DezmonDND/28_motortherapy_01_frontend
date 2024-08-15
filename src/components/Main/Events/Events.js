@@ -2,13 +2,14 @@ import "./Events.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import EventIcon1 from "../../../assets/images/events_icon1.png";
-import EventIcon2 from "../../../assets/images/events_icon2.png";
-import EventIcon3 from "../../../assets/images/events_icon3.png";
-import EventIcon4 from "../../../assets/images/events_icon4.png";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../../Modal/Modal";
+import { EVENTS } from "../../../mocks/user-data";
 
 function Events() {
+  const [modal, setModal] = useState(false);
+  const [modalInfo, setModalInfo] = useState({});
+
   const settings = {
     dots: true,
     infinite: false,
@@ -20,7 +21,7 @@ function Events() {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1440,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -29,7 +30,7 @@ function Events() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 998,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -37,7 +38,7 @@ function Events() {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 586,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -46,54 +47,51 @@ function Events() {
     ],
   };
 
+  const handleOpenModal = (eventInfo) => {
+    setModalInfo(eventInfo);
+    setModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setModal(false);
+  };
+
   return (
-    <section className="events">
+    <section className="events" id="events">
       <h2 className="events__title">Мероприятия</h2>
       <button className="events__button">Смотреть все</button>
       <div className="events__content">
         <Slider {...settings}>
-          <div className="events__block">
-            <img src={EventIcon1} alt="slide-1" className="events__icon" />
-            <p className="events__date">17 сентября 2022</p>
-            <p className="events__name">День добрых дел в Гатчине</p>
-            <Link to="" className="events__link">
-              Смотреть
-            </Link>
-          </div>
-          <div className="events__block">
-            <img src={EventIcon2} alt="slide-1" className="events__icon" />
-            <p className="events__date">30 июля 2022</p>
-            <p className="events__name">МотоЭмоции в Всеволожске</p>
-            <Link to="" className="events__link">
-              Смотреть
-            </Link>
-          </div>{" "}
-          <div className="events__block">
-            <img src={EventIcon3} alt="slide-1" className="events__icon" />
-            <p className="events__date">25 июня 2022</p>
-            <p className="events__name">Хоспис Токсово</p>
-            <Link to="" className="events__link">
-              Смотреть
-            </Link>
-          </div>{" "}
-          <div className="events__block">
-            <img src={EventIcon4} alt="slide-1" className="events__icon" />
-            <p className="events__date">17 сентября 2022</p>
-            <p className="events__name">День добрых дел в Гатчине</p>
-            <Link to="" className="events__link">
-              Смотреть
-            </Link>
-          </div>{" "}
-          <div className="events__block">
-            <img src={EventIcon1} alt="slide-1" className="events__icon" />
-            <p className="events__date">17 сентября 2022</p>
-            <p className="events__name">День добрых дел в Гатчине</p>
-            <Link to="" className="events__link">
-              Смотреть
-            </Link>
-          </div>
+          {EVENTS.map((event) => (
+            <div
+              className="events__block"
+              key={event.id}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img src={event.icon} alt="slide-1" className="events__icon" />
+              <p className="events__date">{event.date}</p>
+              <p className="events__name">{event.title}</p>
+              <button
+                value={event}
+                onClick={() =>
+                  handleOpenModal({
+                    date: event.date,
+                    name: event.title,
+                    icon: event.icon,
+                  })
+                }
+                className="events__link"
+              >
+                Смотреть
+              </button>
+            </div>
+          ))}
         </Slider>
       </div>
+      {modal && <Modal info={modalInfo} onClose={handleCloseModal} />}
     </section>
   );
 }

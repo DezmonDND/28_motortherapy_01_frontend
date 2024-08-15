@@ -6,8 +6,11 @@ import Friends from "../Friends/Friends";
 import HelpUs from "../HelpUs/HelpUs";
 import OurAchievements from "../OurAchievements/OurAchievements";
 import Promo from "../Promo/Promo";
+import Feedback from "../Feedback/Feedback";
 
-function Main() {
+function Main(props) {
+  const { onOpenPopup, onClose } = props;
+
   return (
     <>
       <main className="main-content">
@@ -15,6 +18,7 @@ function Main() {
         <AboutUs />
         <OurAchievements />
         <Events />
+        <Feedback onOpenPopup={onOpenPopup} onClose={onClose}></Feedback>
         <ContactUs />
         <HelpUs />
         <Friends />

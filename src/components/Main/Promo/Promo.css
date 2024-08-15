@@ -59,7 +59,6 @@
 .promo-buttons {
   display: flex;
   margin-top: 78px;
-
 }
 
 .promo-buttons__button {
@@ -72,6 +71,7 @@
   transition: 0.3s;
   text-decoration: none;
   color: #000;
+  text-align: center;
 }
 
 .promo-buttons__button:hover {
@@ -146,9 +146,7 @@
 @media screen and (max-width: 500px) {
   .promo-container {
     position: relative;
-    margin: 0 8px;
-    
-
+    margin: 0 auto;
   }
 
   .promo-info__title {
@@ -175,7 +173,7 @@
     position: relative;
     top: -163px;
     background-image: url(../../../assets/images/preview_320.png);
-    background-size: contain;
+    background-size: cover;
   }
 
   .promo-container {

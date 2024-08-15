@@ -1,4 +1,6 @@
 .helpUs {
+  display: grid;
+  justify-content: center;
   margin-top: 128px;
 }
 .helpUs__title {

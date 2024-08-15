@@ -63,7 +63,14 @@ function Events() {
       <div className="events__content">
         <Slider {...settings}>
           {EVENTS.map((event) => (
-            <div className="events__block" key={event.id}>
+            <div
+              className="events__block"
+              key={event.id}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
               <img src={event.icon} alt="slide-1" className="events__icon" />
               <p className="events__date">{event.date}</p>
               <p className="events__name">{event.title}</p>

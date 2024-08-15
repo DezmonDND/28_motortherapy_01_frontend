@@ -26,9 +26,10 @@
 .form__block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 28px;
+  /* margin-bottom: 28px; */
   margin-top: 28px;
 }
+
 .form__input-name {
   font-weight: 500;
   font-size: 20px;
@@ -52,7 +53,7 @@
 .form__input_phone {
   width: 326px;
 }
-.form__input_e-mail {
+.form__input_email {
   width: 326px;
 }
 .form__input_comment {
@@ -75,12 +76,27 @@
   padding: 16px 32px;
   cursor: pointer;
   margin-bottom: 40px;
-  margin-left: 113px;
+  margin-top: 28px;
 }
 
 .form__button:hover {
   transition: 0.5s;
   transform: scale(1.1);
+}
+
+.form__input-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+  min-height: 30px;
+  max-width: 326px;
+}
+
+.form__input_comment-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+  min-height: 30px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -109,23 +125,38 @@
 
   .form__button {
     margin-top: 23px;
-    margin-left: 81px;
   }
 }
 
-@media screen and (max-width: 900px) {
-  .form__button {
+@media screen and (max-width: 862px) {
+  .contactUs {
     margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  .contactUs__form {
+    border-radius: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .contactUs__container {
-
     background-color: #ececec;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .contactUs__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form__content {
+    display: flex;
+    flex-direction: column;
   }
 
   .form__data {
@@ -133,11 +164,19 @@
   }
 
   .form__button {
-    margin-left: 0;
+    max-width: 256px;
+    align-self: center;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 16px 54px;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .form__input-error {
+    max-width: 250px;
+  }
+
   .form__input_name {
     width: 250px;
   }
@@ -153,7 +192,7 @@
 
 @media screen and (max-width: 500px) {
   .contactUs {
-    margin: 148px 32px 0;
+    margin: 148px 0 0;
     background-color: #ececec;
   }
 
@@ -195,8 +234,5 @@
 
   .form__button {
     margin: 24px 0 0;
-    font-size: 18px;
-    line-height: 22px;
-    padding: 16px 54px;
   }
 }

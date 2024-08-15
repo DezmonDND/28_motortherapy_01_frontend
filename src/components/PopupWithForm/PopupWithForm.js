@@ -1,12 +1,10 @@
-import "./ContactUs.css";
-import { useFormWithValidation } from "../../../hoocks/validation";
-import {
-  REGEX_EMAIL,
-  REGEX_NAME,
-  REGEX_PHONE,
-} from "../../../mocks/constatnts";
+import "./PopupWithForm.css";
+import { useFormWithValidation } from "../../hoocks/validation";
+import { REGEX_EMAIL, REGEX_NAME } from "../../mocks/constatnts";
 
-function ContactUs() {
+function PopupWithForm(props) {
+  const { isOpen, onClose } = props;
+
   const { values, errors, isValid, handleChange } = useFormWithValidation();
 
   function handleSubmit(e) {
@@ -14,13 +12,19 @@ function ContactUs() {
   }
 
   return (
-    <section className="contactUs" id="contactUs">
+    <div
+      className={`popup ${isOpen ? "popup_opened" : ""}`}
+      onClick={(e) => {
+        if (e.target.classList.contains("popup_opened")) {
+          onClose();
+        }
+      }}
+    >
       <div className="contactUs__container">
-        <h2 className="contactUs__title">Связаться с нами</h2>
-        <form className="contactUs__form" onSubmit={handleSubmit} noValidate>
+        <form className="contactUs__form feedback_form" onSubmit={handleSubmit} noValidate>
           <div className="form__content">
             <div className="form__data">
-              <div className="form__block">
+              <div className="form__block feedback_block">
                 <label className="form__input-name">Ваше имя:</label>
                 <input
                   onChange={handleChange}
@@ -35,22 +39,6 @@ function ContactUs() {
                 ></input>
                 <span className="form__input_name-error form__input-error">
                   {errors.name}
-                </span>
-              </div>
-              <div className="form__block">
-                <label className="form__input-name">Телефон:</label>
-                <input
-                  onChange={handleChange}
-                  className="form__input form__input_phone"
-                  placeholder="7-900-000-0000"
-                  value={values.phone || ""}
-                  name="phone"
-                  type="phone"
-                  pattern={REGEX_PHONE}
-                  required
-                ></input>
-                <span className="form__input_phone-error form__input-error">
-                  {errors.phone}
                 </span>
               </div>
               <div className="form__block">
@@ -70,7 +58,7 @@ function ContactUs() {
               </div>
             </div>
             <div className="form__block">
-              <label className="form__input-name">Комментарий:</label>
+              <label className="form__input-name">Текст отзыва:</label>
               <textarea
                 onChange={handleChange}
                 className="form__comment form__input_comment"
@@ -83,21 +71,21 @@ function ContactUs() {
                 {errors.comment}
               </span>
             </div>
-          <button
-            className="form__button"
-            type="submit"
-            disabled={!isValid}
-            style={{
-              backgroundColor: !isValid ? "#C2C2C2" : "",
-            }}
-          >
-            Связаться с нами
-          </button>
+            <button
+              className="form__button"
+              type="submit"
+              disabled={!isValid}
+              style={{
+                backgroundColor: !isValid ? "#C2C2C2" : "",
+              }}
+            >
+              Отправить отзыв
+            </button>
           </div>
         </form>
       </div>
-    </section>
+    </div>
   );
 }
 
-export default ContactUs;
+export default PopupWithForm;

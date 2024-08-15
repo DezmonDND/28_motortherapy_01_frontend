@@ -73,6 +73,7 @@
 
   .friends__image {
     width: 191px;
+    margin: auto;
   }
   .friends__slider {
     gap: 10px;

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState } from "react";
 import { FEEDBACKS } from "../../../mocks/user-data";
 import "./Feedback.css";

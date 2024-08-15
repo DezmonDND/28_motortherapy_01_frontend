@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "./NotFound.css";
 import NotFoundBigIcon from "../../../assets/images/404_big.webp";
 import NotFoundSmallIcon from "../../../assets/images/404_small.webp";

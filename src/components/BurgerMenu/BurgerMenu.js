@@ -1,6 +1,5 @@
 import { HashLink } from "react-router-hash-link";
 import "./BurgerMenu.css";
-import { Link } from "react-router-dom";
 import VkIcon from "../../assets/images/vk_icon_burger.png";
 import WhatsUpIcon from "../../assets/images/wp_icon_burger.png";
 import CloseButton from "../../assets/images/close-button.png";

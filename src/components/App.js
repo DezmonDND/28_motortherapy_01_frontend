@@ -30,7 +30,7 @@ function App() {
             ></Main>
           }
         ></Route>
-        <Route path="/404" element={<NotFound></NotFound>}></Route>
+        <Route path="/*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <PopupWithForm isOpen={isOpen} onClose={closePopup}></PopupWithForm>

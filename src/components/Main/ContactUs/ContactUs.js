@@ -83,16 +83,16 @@ function ContactUs() {
                 {errors.comment}
               </span>
             </div>
-          <button
-            className="form__button"
-            type="submit"
-            disabled={!isValid}
-            style={{
-              backgroundColor: !isValid ? "#C2C2C2" : "",
-            }}
-          >
-            Связаться с нами
-          </button>
+            <button
+              className="form__button"
+              type="submit"
+              disabled={!isValid}
+              style={{
+                backgroundColor: !isValid ? "#C2C2C2" : "",
+              }}
+            >
+              Связаться с нами
+            </button>
           </div>
         </form>
       </div>

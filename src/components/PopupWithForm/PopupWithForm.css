@@ -25,3 +25,11 @@
 .feedback_block {
     margin-top: 30px;
 }
+
+@media screen and (max-height: 577px) {
+  .popup {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  
+}

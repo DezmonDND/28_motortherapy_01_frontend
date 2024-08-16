@@ -28,7 +28,7 @@
   .achievements {
     grid-template-columns: auto;
     margin-top: 85px;
-    gap: 56px;
+    gap: 0;
     justify-content: center;
   }
 }

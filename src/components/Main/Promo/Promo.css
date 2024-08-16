@@ -3,6 +3,7 @@
   width: 100%;
   height: 700px;
   position: relative;
+  max-height: 620px;
 }
 
 .promo-background {
@@ -58,7 +59,7 @@
 
 .promo-buttons {
   display: flex;
-  margin-top: 78px;
+  margin-top: 69px;
 }
 
 .promo-buttons__button {
@@ -102,12 +103,6 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .promo-container {
-    margin-left: 30px;
-  }
-}
-
-@media screen and (max-width: 1440px) {
   .promo {
     height: 447px;
   }
@@ -134,28 +129,19 @@
     text-align: left;
   }
 
+  .promo-buttons {
+    margin-top: 77px;
+  }
+
   .promo-buttons__button {
+    text-align: center;
     margin-right: 18px;
+    padding: 0 21px;
+    align-content: center;
   }
 
   .promo-buttons__button:last-child {
-    padding: 16px 52px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .promo-container {
-    position: relative;
-    margin: 0 auto;
-  }
-
-  .promo-info__title {
-    font-size: 36px;
-  }
-
-  .promo-buttons {
-    display: flex;
-    flex-direction: column;
+    padding: 16px 42px;
   }
 }
 
@@ -167,6 +153,10 @@
 
   .promo-info {
     width: max-content;
+    margin-top: 150px;
+  }
+  .promo-info__title {
+    font-size: 36px;
   }
 
   .promo-background {
@@ -178,6 +168,8 @@
 
   .promo-container {
     top: -415px;
+    position: relative;
+    margin: 0 auto;
     width: max-content;
     display: flex;
     flex-direction: column;
@@ -193,14 +185,16 @@
   }
 
   .promo-buttons {
+    display: flex;
+    flex-direction: column;
     width: max-content;
-    margin-top: 29px;
+    margin-top: 22px;
     gap: 20px;
   }
 
   .promo-buttons__button {
     margin-right: 0;
-    padding: 19px 58px;
+    padding: 21px 46px;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 1.5px;

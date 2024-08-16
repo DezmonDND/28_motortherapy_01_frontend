@@ -1,6 +1,6 @@
 .friends {
   margin-top: 128px;
-  margin-bottom: 128px;
+  margin-bottom: 167px;
 }
 
 .friends__title {
@@ -40,12 +40,14 @@
 
 @media screen and (max-width: 1440px) {
   .friends {
-    margin: 131px 30px 184px;
+    margin: 131px 30px 157px;
   }
+
   .friends__image {
     width: 220px;
     height: 220px;
   }
+
   .firends__button {
     display: none;
   }
@@ -57,14 +59,14 @@
 
 @media screen and (max-width: 500px) {
   .friends {
-    margin: 74px 65px 132px;
+    margin: 76px 65px 115px;
   }
 
   .friends__title {
     text-align: center;
     font-size: 26px;
     line-height: 32px;
-    margin-bottom: 36px;
+    margin-bottom: 14px;
   }
 
   .firends__button {
@@ -75,7 +77,9 @@
     width: 191px;
     margin: auto;
   }
+
   .friends__slider {
     gap: 10px;
+    margin-top: 19px;
   }
 }

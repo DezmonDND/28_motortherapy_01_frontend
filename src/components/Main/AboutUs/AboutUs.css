@@ -38,7 +38,7 @@
   margin-right: 40px;
   font-weight: 500;
   font-size: 24px;
-  padding: 16px 32px;
+  padding: 14px 41px;
   border-radius: 15px;
   transition: 0.3s;
   background-color: rgba(15, 218, 206, 1);
@@ -102,6 +102,7 @@
 
   .about-us-text {
     margin-top: 7px;
+    align-self: center;
   }
   .about-us__title {
     text-align: center;
@@ -117,7 +118,7 @@
 
   .about-us__photo {
     max-height: 159px;
-    margin: 15px -32px;
+    margin: 17px -32px 24px;
     object-fit: cover;
   }
 
@@ -125,5 +126,6 @@
     margin: 16px 0 0;
     font-size: 18px;
     line-height: 22px;
+    align-self: center;
   }
 }

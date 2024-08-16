@@ -10,6 +10,7 @@
   position: relative;
   align-items: center;
 }
+
 .notFound__title {
   display: flex;
   flex-direction: column;
@@ -53,10 +54,12 @@
 
   .notFound__image {
     max-width: 754px;
-    top: -112px;
+    top: -100px;
   }
 
   .notFound__button {
+    position: relative;
+    top: -25px;
     padding: 16px 65px;
   }
 }
@@ -75,5 +78,25 @@
   .notFound__button {
     margin: 76px 0 141px;
     padding: 16px 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .notFound__image {
+    max-width: 294px;
+    width: 100%;
+    top: -4px;
+    left: -13px;
+  }
+
+  .notFound__title {
+    margin: 52px 0 0;
+  }
+
+  .notFound__button {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 72px;
+    padding: 16px 72px;
   }
 }

@@ -81,6 +81,9 @@ function Events() {
                     date: event.date,
                     name: event.title,
                     icon: event.icon,
+                    text: event.text,
+                    link: event.link,
+                    photo: event.photo,
                   })
                 }
                 className="events__link"

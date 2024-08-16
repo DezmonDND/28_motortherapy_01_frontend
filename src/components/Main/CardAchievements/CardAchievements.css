@@ -1,9 +1,8 @@
 .card-achievements {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   max-width: 304px;
-  justify-content: center;
-  align-items: center;
+  justify-items: center;
+  align-content: baseline;
   row-gap: 22px;
 }
 
@@ -13,24 +12,15 @@
 }
 
 .card-achievements__paragraph {
-  margin: 0;
-  color: rgb(0, 0, 0);
-  font-family: Montserrat, sans-serif;
-  font-size: 26px;
   font-weight: 600;
+  font-size: 26px;
   line-height: 32px;
-  letter-spacing: 0%;
   text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
   .card-achievements {
-margin-top: 60px;
-
-  }
-  .card-achievements__paragraph {
-    font-size: 26px;
-    line-height: 32px;
+    margin-top: 60px;
   }
 }
 
@@ -39,11 +29,13 @@ margin-top: 60px;
     font-size: 18px;
     line-height: 22px;
   }
+
   .card-achievements__img {
     width: 70px;
     height: 70px;
   }
+
   .card-achievements {
     max-width: 220px;
   }
-  }
+}

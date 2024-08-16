@@ -6,10 +6,10 @@ import "./Feedback.css";
 function Feedback(props) {
   const [feedbacks, setFeedbacks] = useState(FEEDBACKS);
 
-  const {onOpenPopup} = props;
+  const { onOpenPopup } = props;
 
   function handleFeedbackClick() {
-    onOpenPopup()
+    onOpenPopup();
   }
 
   return (
@@ -25,7 +25,11 @@ function Feedback(props) {
             </div>
           ))}
       </div>
-      <button type="button" className="feedback__button" onClick={handleFeedbackClick}>
+      <button
+        type="button"
+        className="feedback__button"
+        onClick={handleFeedbackClick}
+      >
         Оставить отзыв
       </button>
     </section>

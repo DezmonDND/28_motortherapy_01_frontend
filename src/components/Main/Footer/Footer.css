@@ -10,12 +10,14 @@
   width: 100%;
   margin: 0 auto 48px;
 }
+
 .footer__title {
   margin: 48px 0 32px 0;
   font-weight: 700;
   font-size: 22px;
   line-height: 27px;
 }
+
 .footer__content {
   display: flex;
   justify-content: space-between;
@@ -29,12 +31,14 @@
   display: flex;
   gap: 16px;
 }
+
 .footer__links-title {
   margin: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }
+
 .footer__links {
   list-style: none;
   padding: 0;
@@ -42,6 +46,7 @@
   flex-direction: column;
   margin: 16px 0 0;
 }
+
 .footer__link {
   color: #000000;
   text-decoration: none;
@@ -50,6 +55,7 @@
   line-height: 19px;
   margin-bottom: 16px;
 }
+
 .footer__link:last-of-type {
   margin-bottom: 0;
 }
@@ -63,9 +69,11 @@
   .footer {
     justify-content: center;
   }
+
   .footer__container {
     margin: 0 45px 48px;
   }
+
   .footer__title {
     margin: 39px 0 45px 0;
   }
@@ -80,6 +88,7 @@
     margin: 36px 32px;
     max-width: 256px;
   }
+
   .footer__content {
     flex-direction: column;
     gap: 32px;
@@ -94,6 +103,7 @@
   .footer__links {
     margin: 18px 0 4px;
   }
+
   .footer__links-title {
     font-size: 18px;
     line-height: 22px;

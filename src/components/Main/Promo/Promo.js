@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./Promo.css";
 import { HashLink } from "react-router-hash-link";
 

@@ -13,7 +13,7 @@
 }
 
 .feedback__title {
-    align-self: flex-start;
+  align-self: center;
 }
 
 .feedback__block {
@@ -25,18 +25,22 @@
   padding: 10px;
   background-color: #fff;
 }
+
 .feedback__name {
   margin: 0;
   text-overflow: ellipsis;
 }
+
 .feedback__email {
   margin: 0;
   text-overflow: ellipsis;
 }
+
 .feedback__text {
   margin: 0;
   text-overflow: ellipsis;
 }
+
 .feedback__button {
   font-size: 18px;
   line-height: 22px;
@@ -58,15 +62,23 @@
   .feedback__container {
     grid-template-columns: auto auto;
   }
+
+  .feedback__title {
+    align-self: flex-start;
+  }
 }
 
 @media screen and (min-width: 999px) {
   .feedback__container {
     grid-template-columns: auto auto auto;
   }
-.feedback__title {
-    font-weight: 600;font-size: 32px;line-height: 39px;
-}
+
+  .feedback__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+  }
+
   .feedback__button {
     font-size: 24px;
     line-height: 29px;
@@ -75,8 +87,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .feedback {
-      margin: 100px 0;
-    }
+  .feedback {
+    margin: 100px 0;
   }
-
+}

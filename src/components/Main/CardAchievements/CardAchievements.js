@@ -6,7 +6,7 @@ function CardAchievements(props) {
       <img className="card-achievements__img" src={props.img} alt={props.alt} />
       <p className="card-achievements__paragraph">{props.children}</p>
     </div>
-  )
+  );
 }
 
 export default CardAchievements;

@@ -31,7 +31,6 @@
   align-items: center;
   max-width: 305px;
   width: 100%;
-  max-height: 515px;
   height: 100%;
   margin-bottom: 10px;
   margin-top: 0;
@@ -73,8 +72,14 @@
 }
 
 .events__link:hover {
+  cursor: pointer;
   transition: 0.5s;
-  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.events__link:active {
+  transform: scale(0.9);
+  transition: 0.5s;
 }
 
 .my-dots {

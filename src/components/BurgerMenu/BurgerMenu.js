@@ -3,6 +3,7 @@ import "./BurgerMenu.css";
 import VkIcon from "../../assets/images/vk_icon_burger.png";
 import WhatsUpIcon from "../../assets/images/wp_icon_burger.png";
 import CloseButton from "../../assets/images/close-button.png";
+import TgIcon from "../../assets/images/tg_icon_white.svg";
 
 function BurgerMenu(props) {
   const { isOpen, onClose } = props;
@@ -38,13 +39,33 @@ function BurgerMenu(props) {
             className="burger__social-link"
             target="newBlank"
           >
-            <img classList="burger__social-icon" src={VkIcon} alt="Icon"></img>
+            <img
+              classList="burger__social-icon"
+              src={VkIcon}
+              alt="Icon"
+              style={{
+                width: 33,
+              }}
+            ></img>
           </a>
           <a href="/" className="burger__social-link" target="newBlank">
             <img
               classList="burger__social-icon"
               src={WhatsUpIcon}
               alt="Icon"
+              style={{
+                width: 33,
+              }}
+            ></img>
+          </a>
+          <a href="/" className="burger__social-link" target="newBlank">
+            <img
+              classList="burger__social-icon"
+              src={TgIcon}
+              alt="Icon"
+              style={{
+                width: 33,
+              }}
             ></img>
           </a>
         </div>

@@ -6,10 +6,11 @@ import Friends from "../Friends/Friends";
 import HelpUs from "../HelpUs/HelpUs";
 import OurAchievements from "../OurAchievements/OurAchievements";
 import Promo from "../Promo/Promo";
-import Feedback from "../Feedback/Feedback";
+import Feedbacks from "../Feedbacks/Feedbacks";
 
 function Main(props) {
-  const { onOpenPopup, onClose } = props;
+  const { onOpenAddFeedbackPopup, onOpenFeedbackPopup, onClose, feedbacks } =
+    props;
 
   return (
     <>
@@ -18,7 +19,12 @@ function Main(props) {
         <AboutUs />
         <OurAchievements />
         <Events />
-        <Feedback onOpenPopup={onOpenPopup} onClose={onClose}></Feedback>
+        <Feedbacks
+          feedbacks={feedbacks}
+          onOpenAddFeedbackPopup={onOpenAddFeedbackPopup}
+          onOpenFeedbackPopup={onOpenFeedbackPopup}
+          onClose={onClose}
+        ></Feedbacks>
         <ContactUs />
         <HelpUs />
         <Friends />

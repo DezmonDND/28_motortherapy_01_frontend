@@ -13,7 +13,7 @@ function PopupWithForm(props) {
 
   return (
     <div
-      className={`popup ${isOpen ? "popup_opened" : ""}`}
+      className={`popup popup-contactUs ${isOpen ? "popup_opened" : ""}`}
       onClick={(e) => {
         if (e.target.classList.contains("popup_opened")) {
           onClose();
@@ -48,6 +48,8 @@ function PopupWithForm(props) {
                   className="form__input form__input_email"
                   placeholder="email@email.ru"
                   name="email"
+                  minLength={5}
+                  maxLength={50}
                   value={values.email || ""}
                   pattern={REGEX_EMAIL}
                   required
@@ -64,7 +66,8 @@ function PopupWithForm(props) {
                 className="form__comment form__input_comment"
                 placeholder="Оставьте свой комментарий..."
                 name="comment"
-                minLength={5}
+                minLength={2}
+                maxLength={1000}
                 required
               ></textarea>
               <span className="form__input_comment-error">

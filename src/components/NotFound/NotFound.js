@@ -1,15 +1,15 @@
 /* eslint-disable */
 import "./NotFound.css";
-import NotFoundBigIcon from "../../../assets/images/404_big.webp";
-import NotFoundSmallIcon from "../../../assets/images/404_small.webp";
-import NotFoundMiddleIcon from "../../../assets/images/404_middle.png";
+import NotFoundBigIcon from "../../assets/images/404_big.webp";
+import NotFoundSmallIcon from "../../assets/images/404_small.webp";
+import NotFoundMiddleIcon from "../../assets/images/404_middle.png";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
   BIG_WIDTH_SIZE,
   MIDDLE_WIDTH_SIZE,
   MOBILE_WIDTH_SIZE,
-} from "../../../mocks/constatnts";
+} from "../../mocks/constatnts";
 import debounce from "debounce";
 
 function NotFound() {

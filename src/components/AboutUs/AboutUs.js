@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 import "./AboutUs.css";
-import AboutUsPhoto from "./images/photo-about-us.jpg";
+import AboutUsPhoto from "../../assets/images/photo-about-us.jpg";
 
 function AboutUs() {
   return (

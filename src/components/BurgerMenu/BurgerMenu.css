@@ -54,8 +54,6 @@
   gap: 20px;
 }
 
-.burger__social-icon {
-  width: 61px;
-  height: 39px;
-  color: #fff;
+.burger__social-link {
+  display: flex;
 }

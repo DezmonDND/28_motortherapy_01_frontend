@@ -101,7 +101,37 @@ export const FEEDBACKS = [
   {
     name: "John",
     email: "john@example.com",
+    text: "Text text text text text text text text text text text text text text text text text text text text Text text text text text text text text text text text text text text text text text text text text",
+  },
+  {
+    name: "John",
+    email: "john@example.com",
     text: "Text text text text text text text text text text text text text text text text text text text text",
+  },
+  {
+    name: "John",
+    email: "john@example.com",
+    text: "Text text text text text text text text text text text text text text text text text text text text",
+  },
+  {
+    name: "John",
+    email: "john@example.com",
+    text: "Text text text text text text text text text text text text text text text text text text text text",
+  },
+  {
+    name: "John",
+    email: "john@example.com",
+    text: "Text text text text text text text text text text text text text text text text text text text text",
+  },
+  {
+    name: "John",
+    email: "john@example.com",
+    text: "Text text text text text text text text text text text text text text text text text text text text",
+  },
+  {
+    name: "John",
+    email: "john@example.com",
+    text: "Text text text text text text text text text text text text text text text text text text text text Text text text text text text text text text text text text text text text text text text text text",
   },
   {
     name: "John",

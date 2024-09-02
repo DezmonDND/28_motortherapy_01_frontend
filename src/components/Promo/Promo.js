@@ -24,7 +24,7 @@ function Promo() {
         <div className="promo-buttons">
           <HashLink
             className="promo-buttons__button promo-buttons__button_color"
-            to="#events"
+            to="#contactUs"
           >
             Принять участие
           </HashLink>

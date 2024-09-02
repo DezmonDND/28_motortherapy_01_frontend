@@ -1,0 +1,9 @@
+.feedback__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__button_more {
+  background-color: #f2f2f2;
+  border: 1px solid #0fdace;
+}

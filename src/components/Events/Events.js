@@ -3,8 +3,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useState } from "react";
-import Modal from "../../Modal/Modal";
-import { EVENTS } from "../../../mocks/user-data";
+import Modal from "../Modal/Modal";
+import { EVENTS } from "../../mocks/user-data";
 
 function Events() {
   const [modal, setModal] = useState(false);

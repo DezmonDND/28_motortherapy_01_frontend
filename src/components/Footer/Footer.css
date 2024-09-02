@@ -47,6 +47,11 @@
   margin: 16px 0 0;
 }
 
+.footer__develop-link {
+  display: flex;
+  gap: 10px;
+}
+
 .footer__link {
   color: #000000;
   text-decoration: none;

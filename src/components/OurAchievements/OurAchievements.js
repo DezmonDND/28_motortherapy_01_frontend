@@ -1,9 +1,9 @@
 import CardAchievements from "../CardAchievements/CardAchievements";
 import "./OurAchievements.css";
-import People from "./images/People.png"
-import InLove from "./images/InLove.png"
-import Confetti from "./images/Confetti.png"
-import Doll from "./images/Doll.png"
+import People from "../../assets/images/People.png"
+import InLove from "../../assets/images/InLove.png"
+import Confetti from "../../assets/images/Confetti.png"
+import Doll from "../../assets/images/Doll.png"
 
 
 function OurAchievements() {

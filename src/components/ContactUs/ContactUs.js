@@ -1,10 +1,6 @@
 import "./ContactUs.css";
-import { useFormWithValidation } from "../../../hoocks/validation";
-import {
-  REGEX_EMAIL,
-  REGEX_NAME,
-  REGEX_PHONE,
-} from "../../../mocks/constatnts";
+import { useFormWithValidation } from "../../hoocks/validation";
+import { REGEX_EMAIL, REGEX_NAME, REGEX_PHONE } from "../../mocks/constatnts";
 
 function ContactUs() {
   const { values, errors, isValid, handleChange } = useFormWithValidation();
@@ -60,6 +56,8 @@ function ContactUs() {
                   className="form__input form__input_email"
                   placeholder="email@email.ru"
                   name="email"
+                  minLength={5}
+                  maxLength={50}
                   value={values.email || ""}
                   pattern={REGEX_EMAIL}
                   required
@@ -76,7 +74,8 @@ function ContactUs() {
                 className="form__comment form__input_comment"
                 placeholder="Оставьте свой комментарий..."
                 name="comment"
-                minLength={5}
+                minLength={2}
+                maxLength={1000}
                 required
               ></textarea>
               <span className="form__input_comment-error">

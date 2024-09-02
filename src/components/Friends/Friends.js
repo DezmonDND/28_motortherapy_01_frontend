@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "./Friends.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FRIENDS } from "../../../mocks/user-data";
+import { FRIENDS } from "../../mocks/user-data";
 
 function Friends() {
   const settings = {

@@ -1,8 +1,9 @@
 import "./Footer.css";
 import { HashLink } from "react-router-hash-link";
-import IconVk from "../../../assets/images/vk_icon.svg";
-import IconTg from "../../../assets/images/tg_icon.svg";
-import IconWp from "../../../assets/images/wp_icon.svg";
+import IconVk from "../../assets/images/vk_icon.svg";
+import IconTg from "../../assets/images/tg_icon.svg";
+import IconWp from "../../assets/images/wp_icon.svg";
+import IconGod from '../../assets/images/god_logo.svg'
 
 function Footer() {
   return (
@@ -57,7 +58,12 @@ function Footer() {
             </div>
           </div>
           <div className="footer__develop">
-            <h3 className="footer__links-title">Разработка сайта</h3>
+            <div className="footer__develop-link">
+              <h3 className="footer__links-title">Разработка сайта</h3>
+              <a href="https://guild-of-developers.ru" target="newBlank">
+                <img className="footer__icon" src={IconGod} alt="GoD"></img>
+              </a>
+            </div>
             <p className="footer__text">Политика конфиденциальности</p>
             <p className="footer__text">Все права защищены © 2024</p>
           </div>

@@ -9,7 +9,7 @@ function Navigation() {
         <HashLink to="#aboutUs" className="navigation__item">
           О нас
         </HashLink>
-        <HashLink to="#aboutUs" className="navigation__item">
+        <HashLink to="#events" className="navigation__item">
           Мероприятия
         </HashLink>
         <HashLink to="#contactUs" className="navigation__item">

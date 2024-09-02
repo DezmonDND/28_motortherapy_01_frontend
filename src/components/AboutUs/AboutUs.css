@@ -1,0 +1,131 @@
+.about-us {
+  margin: 128px auto 0;
+  display: flex;
+  column-gap: 35px;
+  position: relative;
+}
+
+.about-us-text {
+  max-width: 531px;
+}
+
+.about-us__title {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  letter-spacing: 0%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.about-us__paragraph {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin: 26px 0;
+}
+
+.about-us__button {
+  position: absolute;
+  border: rgba(15, 218, 206, 1), 1px, solid;
+  margin-right: 40px;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 14px 41px;
+  border-radius: 15px;
+  transition: 0.3s;
+  background-color: rgba(15, 218, 206, 1);
+  bottom: 0;
+  text-decoration: none;
+  color: #000;
+}
+
+.about-us__button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.about-us__button:active {
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+.about-us__photo {
+  max-width: 757px;
+  border-radius: 15px;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1440px) {
+  .about-us {
+    margin: 128px 30px;
+    position: relative;
+    column-gap: 19px;
+  }
+
+  .about-us__button {
+    position: absolute;
+    bottom: -61px;
+    padding: 16px 41px;
+  }
+
+  .about-us__paragraph {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 31px 0;
+  }
+
+  .about-us-text {
+    max-width: 380px;
+  }
+
+  .about-us__photo {
+    max-height: 540px;
+    margin-top: 53px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-us {
+    margin: 0 32px;
+    flex-direction: column;
+  }
+
+  .about-us-text {
+    margin-top: 7px;
+    align-self: center;
+  }
+  .about-us__title {
+    text-align: center;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .about-us__paragraph {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 22px 0;
+  }
+
+  .about-us__photo {
+    max-height: 159px;
+    margin: 17px -32px 24px;
+    object-fit: cover;
+  }
+
+  .about-us__button {
+    margin: 16px 0 0;
+    font-size: 18px;
+    line-height: 22px;
+    align-self: center;
+  }
+}

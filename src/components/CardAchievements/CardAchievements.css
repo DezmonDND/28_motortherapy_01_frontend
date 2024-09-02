@@ -1,0 +1,41 @@
+.card-achievements {
+  display: grid;
+  max-width: 304px;
+  justify-items: center;
+  align-content: baseline;
+  row-gap: 22px;
+}
+
+.card-achievements__img {
+  width: 100px;
+  height: 100px;
+}
+
+.card-achievements__paragraph {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-achievements {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card-achievements__paragraph {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .card-achievements__img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card-achievements {
+    max-width: 220px;
+  }
+}

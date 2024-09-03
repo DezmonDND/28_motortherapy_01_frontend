@@ -9,8 +9,14 @@ import Promo from "../Promo/Promo";
 import Feedbacks from "../Feedbacks/Feedbacks";
 
 function Main(props) {
-  const { onOpenAddFeedbackPopup, onOpenFeedbackPopup, onClose, feedbacks } =
-    props;
+  const {
+    onOpenAddFeedbackPopup,
+    onOpenFeedbackPopup,
+    onOpenFriendsPopup,
+    onClose,
+    feedbacks,
+    friends,
+  } = props;
 
   return (
     <>
@@ -27,7 +33,11 @@ function Main(props) {
         ></Feedbacks>
         <ContactUs />
         <HelpUs />
-        <Friends />
+        <Friends
+          friends={friends}
+          onOpenFriendsPopup={onOpenFriendsPopup}
+          onClose={onClose}
+        />
       </main>
     </>
   );

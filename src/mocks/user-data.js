@@ -95,6 +95,66 @@ export const FRIENDS = [
     icon: FriendsIcon3,
     description: "Логотип друга",
   },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
+  {
+    id: 5,
+    icon: FriendsIcon3,
+    description: "Логотип друга",
+  },
 ];
 
 export const FEEDBACKS = [

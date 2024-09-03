@@ -2,9 +2,10 @@ import Slider from "react-slick";
 import "./Friends.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FRIENDS } from "../../mocks/user-data";
 
-function Friends() {
+function Friends(props) {
+  const { friends, onOpenFriendsPopup } = props;
+
   const settings = {
     dots: true,
     infinite: false,
@@ -54,16 +55,20 @@ function Friends() {
   return (
     <section className="friends" id="friends">
       <h2 className="friends__title">Друзья</h2>
-      <button className="firends__button">Смотреть все</button>
+      <button className="firends__button" onClick={onOpenFriendsPopup}>
+        Смотреть все
+      </button>
       <div className="friends__slider">
         <Slider {...settings}>
-          {FRIENDS.map((friend) => (
+          {friends.map((friend) => (
             <div key={friend.id}>
-              <img
-                className="friends__image"
-                src={friend.icon}
-                alt={friend.description}
-              />
+              <a href="/" className="popup__friends-link" target="blank">
+                <img
+                  className="friends__image"
+                  src={friend.icon}
+                  alt={friend.description}
+                />
+              </a>
             </div>
           ))}
         </Slider>

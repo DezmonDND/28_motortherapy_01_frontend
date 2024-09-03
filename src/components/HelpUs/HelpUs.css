@@ -47,6 +47,17 @@
   line-height: 32px;
 }
 
+.helpUs__link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.helpUs__link:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
 @media screen and (max-width: 1440px) {
   .helpUs {
     margin: 128px 30px;

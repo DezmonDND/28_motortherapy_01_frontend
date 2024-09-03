@@ -21,9 +21,24 @@ function HelpUs() {
           <img src={TruckIcon} alt="Truck icon" className="helpUs__image"></img>
           <h3 className="helpUs__name">Передать вещи</h3>
           <p className="helpUs__text">
-            Вы можете самостоятельно приобрести (мы заберём), заказать в Ozon
-            или Wildberris по адресу: <br /> Санкт-Петербург, Авиаконструкторов
-            пр. 2, ул. Ильюшина, 123 685
+            Вы можете самостоятельно приобрести (мы заберём), заказать в 
+            <a
+              href="https://www.ozon.ru/"
+              className="helpUs__link"
+              target="blank"
+            >
+              Ozon
+            </a>{" "}
+            или{" "}
+            <a
+              href="https://www.wildberries.ru/"
+              target="blank"
+              className="helpUs__link"
+            >
+              Wildberries
+            </a>{" "}
+            по адресу: <br /> Санкт-Петербург, Авиаконструкторов пр. 2, ул.
+            Ильюшина, 123 685
           </p>
         </li>
         <li className="helpUs__info">

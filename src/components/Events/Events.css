@@ -50,6 +50,7 @@
   line-height: 30px;
   color: #515151;
   margin: 10px 0;
+  width: 100%;
 }
 
 .events__name {
@@ -57,6 +58,11 @@
   font-size: 20px;
   line-height: 30px;
   margin: 0 0 20px;
+  width: 100%;
+  max-height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .events__link {
@@ -67,14 +73,15 @@
   line-height: 29px;
   border: 1px solid #0fdace;
   border-radius: 15px;
-  padding: 9px 91px;
+  padding: 12px 91px;
   margin-top: 4px;
+  width: 100%;
 }
 
 .events__link:hover {
   cursor: pointer;
   transition: 0.5s;
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 .events__link:active {
@@ -173,6 +180,7 @@
 
   .events__block {
     margin-top: 24px;
+    max-width: 256px;
   }
   .events__title {
     font-size: 26px;

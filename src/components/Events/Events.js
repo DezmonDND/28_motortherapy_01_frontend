@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
-import { EVENTS } from "../../mocks/user-data";
 
-function Events() {
+function Events(props) {
   const [modal, setModal] = useState(false);
   const [modalInfo, setModalInfo] = useState({});
+  const { events, onOpenEventsPopup } = props;
 
   const settings = {
     dots: true,
@@ -59,10 +59,12 @@ function Events() {
   return (
     <section className="events" id="events">
       <h2 className="events__title">Мероприятия</h2>
-      <button className="events__button">Смотреть все</button>
+      <button className="events__button" onClick={onOpenEventsPopup}>
+        Смотреть все
+      </button>
       <div className="events__content">
         <Slider {...settings}>
-          {EVENTS.map((event) => (
+          {events.map((event) => (
             <div
               className="events__block"
               key={event.id}

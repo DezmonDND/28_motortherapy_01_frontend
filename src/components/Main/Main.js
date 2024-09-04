@@ -13,7 +13,9 @@ function Main(props) {
     onOpenAddFeedbackPopup,
     onOpenFeedbackPopup,
     onOpenFriendsPopup,
+    onOpenEventsPopup,
     onClose,
+    events,
     feedbacks,
     friends,
   } = props;
@@ -24,7 +26,7 @@ function Main(props) {
         <Promo />
         <AboutUs />
         <OurAchievements />
-        <Events />
+        <Events events={events} onOpenEventsPopup={onOpenEventsPopup} />
         <Feedbacks
           feedbacks={feedbacks}
           onOpenAddFeedbackPopup={onOpenAddFeedbackPopup}

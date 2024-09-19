@@ -2,7 +2,6 @@ import "./PopupWithFeedback.css";
 
 function PopupWithFeedback(props) {
   const { isOpen, onClose, selectedFeedback } = props;
-  console.log(selectedFeedback);
 
   return (
     <div

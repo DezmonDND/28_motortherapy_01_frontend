@@ -3,7 +3,8 @@ import { useFormWithValidation } from "../../hoocks/validation";
 import { REGEX_EMAIL, REGEX_NAME, REGEX_PHONE } from "../../mocks/constatnts";
 
 function ContactUs() {
-  const { values, errors, isValid, handleChange } = useFormWithValidation();
+  const { values, errors, isValid, handleChange } =
+    useFormWithValidation();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,8 +25,8 @@ function ContactUs() {
                   placeholder="Введите имя"
                   name="name"
                   value={values.name || ""}
-                  minLength={2}
-                  maxLength={30}
+                  minLength={1}
+                  maxLength={64}
                   pattern={REGEX_NAME}
                   required
                 ></input>
@@ -71,7 +72,7 @@ function ContactUs() {
               <label className="form__input-name">Комментарий:</label>
               <textarea
                 onChange={handleChange}
-                className="form__comment form__input_comment"
+                className="form__comment form__input_comment form__placeholder"
                 placeholder="Оставьте свой комментарий..."
                 name="comment"
                 minLength={2}

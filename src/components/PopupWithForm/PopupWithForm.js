@@ -21,7 +21,11 @@ function PopupWithForm(props) {
       }}
     >
       <div className="contactUs__container">
-        <form className="contactUs__form feedback_form" onSubmit={handleSubmit} noValidate>
+        <form
+          className="contactUs__form feedback_form"
+          onSubmit={handleSubmit}
+          noValidate
+        >
           <div className="form__content">
             <div className="form__data">
               <div className="form__block feedback_block">
@@ -32,8 +36,8 @@ function PopupWithForm(props) {
                   placeholder="Введите имя"
                   name="name"
                   value={values.name || ""}
-                  minLength={2}
-                  maxLength={30}
+                  minLength={1}
+                  maxLength={64}
                   pattern={REGEX_NAME}
                   required
                 ></input>
@@ -60,10 +64,10 @@ function PopupWithForm(props) {
               </div>
             </div>
             <div className="form__block">
-              <label className="form__input-name">Текст отзыва:</label>
+              <label className="form__input-name ">Текст отзыва:</label>
               <textarea
                 onChange={handleChange}
-                className="form__comment form__input_comment"
+                className="form__comment form__input_comment form__placeholder"
                 placeholder="Оставьте свой комментарий..."
                 name="comment"
                 minLength={2}

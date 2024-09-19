@@ -36,6 +36,7 @@
   margin-bottom: 8px;
 }
 .form__input {
+  font-family: "Montserrat";
   height: 46px;
   padding: 0;
   border: 1px solid #afafaf;
@@ -99,6 +100,13 @@
   font-size: 12px;
   margin-top: 8px;
   min-height: 30px;
+}
+
+.form__placeholder {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 @media screen and (max-width: 1440px) {

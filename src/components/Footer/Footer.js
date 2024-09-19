@@ -7,7 +7,7 @@ import IconGod from '../../assets/images/god_logo.svg'
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer__container">
         <h2 className="footer__title">MotoEmotions</h2>
         <div className="footer__content">
@@ -40,14 +40,14 @@ function Footer() {
                 <a href="https://vk.com/mototerapiya" target="newBlank">
                   <img className="footer__icon" src={IconVk} alt="VK"></img>
                 </a>
-                <a href="/" target="newBlank">
+                <a href="https://t.me/mototerapiya" target="newBlank">
                   <img
                     className="footer__icon"
                     src={IconTg}
                     alt="Telegram"
                   ></img>
                 </a>
-                <a href="/" target="newBlank">
+                <a href="https://t.me/mototerapiya" target="newBlank">
                   <img
                     className="footer__icon"
                     src={IconWp}
@@ -64,7 +64,7 @@ function Footer() {
                 <img className="footer__icon" src={IconGod} alt="GoD"></img>
               </a>
             </div>
-            <p className="footer__text">Политика конфиденциальности</p>
+            <a className="footer__text footer__link" href="/" target="">Политика конфиденциальности</a>
             <p className="footer__text">Все права защищены © 2024</p>
           </div>
         </div>

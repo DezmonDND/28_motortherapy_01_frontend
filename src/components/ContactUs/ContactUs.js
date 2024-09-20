@@ -1,20 +1,40 @@
+/*eslint-disable*/
 import "./ContactUs.css";
 import { useFormWithValidation } from "../../hoocks/validation";
 import { REGEX_EMAIL, REGEX_NAME, REGEX_PHONE } from "../../mocks/constatnts";
+import { api } from "../../utils/api";
 
 function ContactUs() {
-  const { values, errors, isValid, handleChange } =
+  const { values, errors, isValid, handleChange, closePopup } =
     useFormWithValidation();
+
+  function handleAddContact(values) {
+    api
+      .contactUs(values)
+      .then(() => {
+        values = {};
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    handleAddContact(values);
   }
 
   return (
     <section className="contactUs" id="contactUs">
       <div className="contactUs__container">
         <h2 className="contactUs__title">Связаться с нами</h2>
-        <form className="contactUs__form" onSubmit={handleSubmit} noValidate>
+        <form
+          className="contactUs__form"
+          onSubmit={handleSubmit}
+          noValidate
+          id="contactForm"
+        >
           <div className="form__content">
             <div className="form__data">
               <div className="form__block">
@@ -42,8 +62,10 @@ function ContactUs() {
                   placeholder="7-900-000-0000"
                   value={values.phone || ""}
                   name="phone"
-                  type="phone"
-                  pattern={REGEX_PHONE}
+                  type="number"
+                  minLength={11}
+                  maxLength={12}
+                  // pattern={REGEX_PHONE}
                   required
                 ></input>
                 <span className="form__input_phone-error form__input-error">

@@ -22,6 +22,7 @@ function Friends(props) {
           slidesToShow: 4,
           slidesToScroll: 2,
           initialSlide: 2,
+          infinite: true,
         },
       },
       {
@@ -47,6 +48,7 @@ function Friends(props) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: true,
         },
       },
     ],

@@ -4,6 +4,11 @@ import closeButton from "../../assets/images/close-button.png";
 function PopupWithEvents(props) {
   const { events, isOpen, onClose } = props;
 
+  function convertDate(data) {
+    const date = new Date(data);
+    return date.toLocaleDateString();
+  }
+
   return (
     <div
       className={`popup popup-events ${isOpen ? "popup_opened" : ""}`}
@@ -13,11 +18,16 @@ function PopupWithEvents(props) {
         }
       }}
     >
-      <div style={{
-        position: 'relative',
-        overflowY: 'auto'
-      }}>
-        <button onClick={onClose} className="modal__close-button modal__close-button_events">
+      <div
+        style={{
+          position: "relative",
+          overflowY: "auto",
+        }}
+      >
+        <button
+          onClick={onClose}
+          className="modal__close-button modal__close-button_events"
+        >
           <img
             src={closeButton}
             className="modal__close-button-img"
@@ -28,10 +38,11 @@ function PopupWithEvents(props) {
           {events.map((event) => (
             <a
               className="popup__events-link"
-              href={event.link}
+              href={event.video}
               target="blank"
               style={{
-                backgroundImage: `url(${event.icon})`,
+                backgroundImage: `url(${event.preview})`,
+                borderRadius: 10,
               }}
             >
               <div
@@ -47,7 +58,7 @@ function PopupWithEvents(props) {
                     padding: 0,
                   }}
                 >
-                  {event.date}
+                  {convertDate(event.date)}
                 </p>
               </div>
             </a>

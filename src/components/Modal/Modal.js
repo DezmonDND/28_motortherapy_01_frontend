@@ -70,9 +70,9 @@ function Modal({ info, onClose }) {
             className="modal__video"
             width="645"
             height="409"
-            src={info.link}
+            src={info.video}
+            frameBorder="none"
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
@@ -81,7 +81,7 @@ function Modal({ info, onClose }) {
               <div>
                 <img
                   className="modal__slide"
-                  src={photo.link}
+                  src={photo.image}
                   alt={info.name}
                 />
               </div>

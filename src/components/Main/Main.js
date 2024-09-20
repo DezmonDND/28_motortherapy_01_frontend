@@ -18,6 +18,7 @@ function Main(props) {
     events,
     feedbacks,
     friends,
+    handleAddContact,
   } = props;
 
   return (
@@ -33,7 +34,7 @@ function Main(props) {
           onOpenFeedbackPopup={onOpenFeedbackPopup}
           onClose={onClose}
         ></Feedbacks>
-        <ContactUs />
+        <ContactUs handleAddContact={handleAddContact} />
         <HelpUs />
         <Friends
           friends={friends}

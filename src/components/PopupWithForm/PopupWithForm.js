@@ -3,12 +3,14 @@ import { useFormWithValidation } from "../../hoocks/validation";
 import { REGEX_EMAIL, REGEX_NAME } from "../../mocks/constatnts";
 
 function PopupWithForm(props) {
-  const { isOpen, onClose } = props;
+  const { isOpen, onClose, handleAddFeedback } = props;
 
   const { values, errors, isValid, handleChange } = useFormWithValidation();
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    handleAddFeedback(values);
   }
 
   return (
@@ -70,7 +72,8 @@ function PopupWithForm(props) {
                 className="form__comment form__input_comment form__placeholder"
                 placeholder="Оставьте свой комментарий..."
                 name="comment"
-                minLength={2}
+                value={values.comment || ""}
+                minLength={1}
                 maxLength={1000}
                 required
               ></textarea>

@@ -9,7 +9,7 @@ function Feedback(props) {
 
   return (
     <div className="feedback__block">
-      <h2 className="feedback__name">{feedback.name}</h2>
+      <h2 className="feedback__name">{feedback.author_name}</h2>
       <p className="feedback__email">{feedback.email}</p>
       {feedback.text.length < 100 ? (
         <p className="feedback__text">{feedback.text}</p>

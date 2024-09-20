@@ -56,6 +56,11 @@ function Events(props) {
     setModal(false);
   };
 
+  function convertDate(data) {
+    const date = new Date(data);
+    return date.toLocaleDateString();
+  }
+
   return (
     <section className="events" id="events">
       <h2 className="events__title">Мероприятия</h2>
@@ -73,19 +78,19 @@ function Events(props) {
                 alignItems: "center",
               }}
             >
-              <img src={event.icon} alt="slide-1" className="events__icon" />
-              <p className="events__date">{event.date}</p>
+              <img src={event.preview} alt="slide-1" className="events__icon" />
+              <p className="events__date">{convertDate(event.date)}</p>
               <p className="events__name">{event.title}</p>
               <button
                 value={event}
                 onClick={() =>
                   handleOpenModal({
-                    date: event.date,
+                    date: convertDate(event.date),
                     name: event.title,
-                    icon: event.icon,
-                    text: event.text,
+                    icon: event.preview,
+                    text: event.description,
                     link: event.link,
-                    photo: event.photo,
+                    photo: event.photos,
                   })
                 }
                 className="events__link"

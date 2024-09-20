@@ -10,16 +10,52 @@ import PopupWithFeedback from "./PopupWithFeedback/PopupWithFeedback";
 import { EVENTS, FEEDBACKS, FRIENDS } from "../mocks/user-data";
 import PopupWithFriends from "./PopupWithFriends/PopupWithFriends";
 import PopupWithEvents from "./PopupWithEvents/PopupWithEvents";
+import { useEffect } from "react";
+import { api } from "../utils/api";
 
 function App() {
-  const [events, setEvents] = useState(EVENTS);
+  // const [events, setEvents] = useState(EVENTS);
+  const [events, setEvents] = useState([]);
   const [friends, setFriends] = useState(FRIENDS);
-  const [feedbacks, setFeedbacks] = useState(FEEDBACKS);
+  // const [feedbacks, setFeedbacks] = useState(FEEDBACKS);
+  const [feedbacks, setFeedbacks] = useState([]);
   const [selectedFeedback, setSelectedFeedback] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const [isPopupEventsOpen, setIsEventsPopupOpen] = useState(false);
   const [isFeedbackPopupOpen, setIsFeedbackPopupOpen] = useState(false);
   const [isPopupFriendsOpen, setIsPopupFriendsOpen] = useState(false);
+
+  useEffect(() => {
+    Promise.all([api.getEvents(), api.getFeedbacks()])
+      .then(([events, feddbacks]) => {
+        setEvents(events.results);
+        setFeedbacks(feddbacks.results);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, [setEvents, setFeedbacks]);
+
+  function handleAddFeedback(values) {
+    api
+      .addFeedback(values)
+      .then((newFeedback) => {
+        setFeedbacks([newFeedback, ...feedbacks]);
+        closePopup();
+      })
+      .catch((e) => console.log(e));
+  }
+
+  function handleAddContact(values) {
+    api
+      .contactUs(values)
+      .then(() => {
+        closePopup();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
 
   function handleOpenFeedbackPopup() {
     setIsOpen(true);
@@ -61,13 +97,18 @@ function App() {
               onOpenFriendsPopup={handleOpenFriendsPopup}
               onOpenEventsPopup={handleOpenEventsPopup}
               onClose={closePopup}
+              handleAddContact={handleAddContact}
             ></Main>
           }
         ></Route>
         <Route path="/*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-      <PopupWithForm isOpen={isOpen} onClose={closePopup}></PopupWithForm>
+      <PopupWithForm
+        isOpen={isOpen}
+        onClose={closePopup}
+        handleAddFeedback={handleAddFeedback}
+      ></PopupWithForm>
       <PopupWithFeedback
         selectedFeedback={selectedFeedback}
         isOpen={isFeedbackPopupOpen}

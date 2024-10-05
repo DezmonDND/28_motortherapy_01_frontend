@@ -1,8 +1,10 @@
+/*eslint-disable*/
 export const REGEX_EMAIL = "^\\S+@\\S+\\.\\S+$";
 // export const REGEX_EMAIL = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-export const REGEX_NAME = "^[а-яА-ЯёЁa-zA-Z\\s\\-]+$";
+export const REGEX_NAME_RU = "^(?:[а-яёА-ЯЁ]+)(?:[\-\s]{0,2})?(?:[а-яёА-ЯЁ]+)?$";
+export const REGEX_NAME_EN = "^(?:[a-zA-Z]+)(?:[\-\s]{0,2})?(?:[a-zA-Z]+)?$";
 // export const REGEX_NAME = /\^\(\?:\[а-яёА-ЯЁ\\s\\-\]\|\[a-zA-Z\\s\\-\]\)\+\$/;
-export const REGEX_PHONE = "[0-9]-[0-9]{3}-[0-9]{3}-[0-9]{4}";
+export const REGEX_PHONE = "^\+?(7|8)?d{10}$";
 // export const REGEX_PHONE = '^(+?7|8)?9d{9}$';
 
 export const BIG_WIDTH_SIZE = 1280;

@@ -57,4 +57,5 @@ export class Api {
 
 export const api = new Api({
   baseUrl: "http://85.209.148.182/api",
+  // baseUrl: "https://moto-therapy-test.god-it.ru/api",
 });

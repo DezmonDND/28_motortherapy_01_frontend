@@ -1,12 +1,19 @@
 /*eslint-disable*/
 import "./ContactUs.css";
 import { useFormWithValidation } from "../../hoocks/validation";
-import { REGEX_EMAIL, REGEX_NAME, REGEX_PHONE } from "../../mocks/constatnts";
+import {
+  REGEX_EMAIL,
+  REGEX_NAME_EN,
+  REGEX_NAME_RU,
+  REGEX_PHONE,
+} from "../../mocks/constatnts";
 import { api } from "../../utils/api";
+import { useState } from "react";
 
 function ContactUs() {
   const { values, errors, isValid, handleChange, closePopup } =
     useFormWithValidation();
+  const [isNameValid, setIsNameValid] = useState(false);
 
   function handleAddContact(values) {
     api
@@ -23,6 +30,7 @@ function ContactUs() {
     e.preventDefault();
 
     handleAddContact(values);
+    e.target.reset();
   }
 
   return (
@@ -47,7 +55,7 @@ function ContactUs() {
                   value={values.name || ""}
                   minLength={1}
                   maxLength={64}
-                  pattern={REGEX_NAME}
+                  pattern="^(?:[а-яёА-ЯЁ]+)(?:[\-\s]{0,2})?(?:[а-яёА-ЯЁ]+)?$|^(?:[a-zA-Z]+)(?:[\-\s]{0,2})?(?:[a-zA-Z]+)?$"
                   required
                 ></input>
                 <span className="form__input_name-error form__input-error">
@@ -62,10 +70,7 @@ function ContactUs() {
                   placeholder="7-900-000-0000"
                   value={values.phone || ""}
                   name="phone"
-                  type="number"
-                  minLength={11}
-                  maxLength={12}
-                  // pattern={REGEX_PHONE}
+                  pattern="^\+?(7|8)?\d{10}$"
                   required
                 ></input>
                 <span className="form__input_phone-error form__input-error">
@@ -79,10 +84,12 @@ function ContactUs() {
                   className="form__input form__input_email"
                   placeholder="email@email.ru"
                   name="email"
+                  type="email"
                   minLength={5}
                   maxLength={50}
                   value={values.email || ""}
-                  pattern={REGEX_EMAIL}
+                  // pattern={REGEX_EMAIL}
+                  pattern="^(?:[а-яёА-ЯЁ]+)(?:[\-\.]{0,2})?(?:[а-яёА-ЯЁ]+)?$"
                   required
                 ></input>
                 <span className="form__input_email-error form__input-error">
@@ -108,7 +115,7 @@ function ContactUs() {
             <button
               className="form__button"
               type="submit"
-              disabled={!isValid}
+              disabled={!isValid && !isNameValid}
               style={{
                 backgroundColor: !isValid ? "#C2C2C2" : "",
               }}

@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e2f52aa8.css",
+    "main.js": "/static/js/main.25a0d2a8.js",
+    "static/media/moto2.png": "/static/media/moto2.4ae5e8fd3923be628692.png",
+    "static/media/friends_logo_1.png": "/static/media/friends_logo_1.f713b1b1f3e5aac8401d.png",
+    "static/media/moto.jpg": "/static/media/moto.3aa24ffa5fa2f5a67103.jpg",
+    "static/media/photo-about-us.jpg": "/static/media/photo-about-us.3f58e661246ca46be03b.jpg",
+    "static/media/events_icon4.png": "/static/media/events_icon4.a7ce6f8fd5ff5e4939b5.png",
+    "static/media/events_icon1.png": "/static/media/events_icon1.5af227fef18a98b07be7.png",
+    "static/media/events_icon3.png": "/static/media/events_icon3.39d9f6cc8d7b2dea6b62.png",
+    "static/media/events_icon2.png": "/static/media/events_icon2.9c33a1ea08492c341bd7.png",
+    "static/media/friends_logo_3.png": "/static/media/friends_logo_3.3bb9079ec1d3f186cbff.png",
+    "static/media/preview_320.png": "/static/media/preview_320.bfaf050afda3421aea74.png",
+    "static/media/friends_logo_4.png": "/static/media/friends_logo_4.21dd1a0907b903728e1a.png",
+    "static/media/friends_logo_2.png": "/static/media/friends_logo_2.5bdd66fbd93422f3fddf.png",
+    "static/media/404_middle.png": "/static/media/404_middle.c0c41000192d277c0067.png",
+    "static/media/404_big.webp": "/static/media/404_big.1ae0b3e72cdfb78e4bc2.webp",
+    "static/media/motorcycle_icon.svg": "/static/media/motorcycle_icon.2968d0d72f2ff4baacef39d752ce0d90.svg",
+    "static/media/404_small.webp": "/static/media/404_small.502033eb84b0d1673b1c.webp",
+    "static/media/money_icon.svg": "/static/media/money_icon.7bff8ae934a79b2abffb20b7254e9b01.svg",
+    "static/media/god_logo.svg": "/static/media/god_logo.c70a41cacace8a5a24b448aee6a0c3a2.svg",
+    "static/media/truck_icon.svg": "/static/media/truck_icon.c4060af552af9b6f780cf45a88014195.svg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/wp_icon.svg": "/static/media/wp_icon.aeae9bccc10311515bb14d9d6370538f.svg",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/tg_icon.svg": "/static/media/tg_icon.ff705446cfae8c96d0cc3c10b7c92934.svg",
+    "static/media/tg_icon_white.svg": "/static/media/tg_icon_white.ab724c6775a4a5bb5bc93005990cb941.svg",
+    "static/media/vk_icon.svg": "/static/media/vk_icon.c209c8edaabfc4b2f7fa39b4949908e3.svg",
+    "index.html": "/index.html",
+    "main.e2f52aa8.css.map": "/static/css/main.e2f52aa8.css.map",
+    "main.25a0d2a8.js.map": "/static/js/main.25a0d2a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2f52aa8.css",
+    "static/js/main.25a0d2a8.js"
+  ]
+}

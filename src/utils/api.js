@@ -26,7 +26,7 @@ export class Api {
   }
 
   addFeedback(values) {
-    return fetch(`${this._baseUrl}/review/create/`, {
+    return fetch(`${this._baseUrl}/review/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

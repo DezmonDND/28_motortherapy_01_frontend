@@ -11,7 +11,7 @@ import motoPhoto2 from "../assets/images/moto2.png";
 
 export const EVENTS = [
   {
-    id: 1,
+    pk: 1,
     icon: EventIcon1,
     date: "17 сентября 2022",
     title: "День добрых дел в Гатчине",
@@ -32,7 +32,7 @@ export const EVENTS = [
     За полные животики от вкуснейших пицц огромное спасибо нашим друзьям - «BERR HOUSE»!`,
   },
   {
-    id: 2,
+    pk: 2,
     icon: EventIcon2,
     date: "30 июля 2022",
     title: "МотоЭмоции в Всеволожске",
@@ -41,7 +41,7 @@ export const EVENTS = [
     text: "Text 2",
   },
   {
-    id: 3,
+    pk: 3,
     icon: EventIcon3,
     date: "25 июня 2022",
     title: "Хоспис Токсово",
@@ -50,7 +50,7 @@ export const EVENTS = [
     text: "Text 3",
   },
   {
-    id: 4,
+    pk: 4,
     icon: EventIcon4,
     date: "17 сентября 2022",
     title: "День добрых дел в Гатчине",
@@ -59,7 +59,7 @@ export const EVENTS = [
     text: "Text 4",
   },
   {
-    id: 5,
+    pk: 5,
     icon: EventIcon3,
     date: "25 июня 2022",
     title: "Хоспис Токсово",
@@ -96,62 +96,12 @@ export const FRIENDS = [
     description: "Логотип друга",
   },
   {
-    id: 5,
+    id: 6,
     icon: FriendsIcon3,
     description: "Логотип друга",
   },
   {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
-    icon: FriendsIcon3,
-    description: "Логотип друга",
-  },
-  {
-    id: 5,
+    id: 7,
     icon: FriendsIcon3,
     description: "Логотип друга",
   },

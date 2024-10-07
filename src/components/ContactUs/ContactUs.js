@@ -1,36 +1,31 @@
 /*eslint-disable*/
 import "./ContactUs.css";
 import { useFormWithValidation } from "../../hoocks/validation";
-import {
-  REGEX_EMAIL,
-  REGEX_NAME_EN,
-  REGEX_NAME_RU,
-  REGEX_PHONE,
-} from "../../mocks/constatnts";
 import { api } from "../../utils/api";
-import { useState } from "react";
 
-function ContactUs() {
-  const { values, errors, isValid, handleChange, closePopup } =
+function ContactUs(props) {
+  const { values, errors, isValid, handleChange, setValues, setIsValid } =
     useFormWithValidation();
-  const [isNameValid, setIsNameValid] = useState(false);
+  const { setIsSuccessPopupOpen, setIsSuccess } = props;
 
   function handleAddContact(values) {
     api
       .contactUs(values)
-      .then(() => {
-        values = {};
+      .then((res) => {
+        setIsSuccess(true);
       })
       .catch((e) => {
+        setIsSuccess(false);
         console.log(e);
       });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-
+    setIsSuccessPopupOpen(true);
     handleAddContact(values);
-    e.target.reset();
+    setValues({});
+    setIsValid(false);
   }
 
   return (
@@ -59,7 +54,8 @@ function ContactUs() {
                   required
                 ></input>
                 <span className="form__input_name-error form__input-error">
-                  {errors.name}
+                  {errors.name &&
+                    "Разрешены латиница или кириллица. Смешивание запрещено."}
                 </span>
               </div>
               <div className="form__block">
@@ -67,7 +63,7 @@ function ContactUs() {
                 <input
                   onChange={handleChange}
                   className="form__input form__input_phone"
-                  placeholder="7-900-000-0000"
+                  placeholder="+7-900-000-0000"
                   value={values.phone || ""}
                   name="phone"
                   pattern="^\+?(7|8)?\d{10}$"
@@ -88,8 +84,6 @@ function ContactUs() {
                   minLength={5}
                   maxLength={50}
                   value={values.email || ""}
-                  // pattern={REGEX_EMAIL}
-                  pattern="^(?:[а-яёА-ЯЁ]+)(?:[\-\.]{0,2})?(?:[а-яёА-ЯЁ]+)?$"
                   required
                 ></input>
                 <span className="form__input_email-error form__input-error">
@@ -106,6 +100,7 @@ function ContactUs() {
                 name="comment"
                 minLength={2}
                 maxLength={1000}
+                value={values.comment || ""}
                 required
               ></textarea>
               <span className="form__input_comment-error">
@@ -115,7 +110,7 @@ function ContactUs() {
             <button
               className="form__button"
               type="submit"
-              disabled={!isValid && !isNameValid}
+              disabled={!isValid}
               style={{
                 backgroundColor: !isValid ? "#C2C2C2" : "",
               }}

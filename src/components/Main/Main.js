@@ -19,6 +19,8 @@ function Main(props) {
     feedbacks,
     friends,
     handleAddContact,
+    setIsSuccessPopupOpen,
+    setIsSuccess
   } = props;
 
   return (
@@ -34,7 +36,11 @@ function Main(props) {
           onOpenFeedbackPopup={onOpenFeedbackPopup}
           onClose={onClose}
         ></Feedbacks>
-        <ContactUs handleAddContact={handleAddContact} />
+        <ContactUs
+          handleAddContact={handleAddContact}
+          setIsSuccessPopupOpen={setIsSuccessPopupOpen}
+          setIsSuccess={setIsSuccess}
+        />
         <HelpUs />
         <Friends
           friends={friends}

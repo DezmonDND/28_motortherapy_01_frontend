@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  align-content: baseline;
   justify-content: center;
   margin: 32px;
   padding: 32px;

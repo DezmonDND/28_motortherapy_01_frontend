@@ -14,11 +14,16 @@ function PopupWithFriends(props) {
     >
       <div className="popup__friends">
         {friends.map((friend) => (
-          <a href="/" target="blank" className="popup__friends-link">
+          <a
+            href="/"
+            target="blank"
+            className="popup__friends-link"
+            key={friend.id}
+          >
             <img
               className="popup__friends-image"
               src={friend.icon}
-              alt={friend.description}
+              alt={friend}
             ></img>
           </a>
         ))}

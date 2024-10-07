@@ -1,5 +1,5 @@
 import "./PopupWithEvents.css";
-import closeButton from "../../assets/images/close-button.png";
+import closeButton from "../../../assets/images/close-button.png";
 
 function PopupWithEvents(props) {
   const { events, isOpen, onClose } = props;
@@ -44,6 +44,7 @@ function PopupWithEvents(props) {
                 backgroundImage: `url(${event.preview})`,
                 borderRadius: 10,
               }}
+              key={event.title}
             >
               <div
                 style={{

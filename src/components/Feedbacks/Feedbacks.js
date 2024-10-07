@@ -45,12 +45,14 @@ function Feedbacks(props) {
       <div className="feedback__container">
         {feedbacks.length !== 0 &&
           feedbacksList.map((feedback) => (
-            <Feedback
-              feedback={feedback}
-              onOpenAddFeedbackPopup={onOpenAddFeedbackPopup}
-              onOpenFeedbackPopup={onOpenFeedbackPopup}
-              onClose={onClose}
-            />
+            <div key={feedback.author_name}>
+              <Feedback
+                feedback={feedback}
+                onOpenAddFeedbackPopup={onOpenAddFeedbackPopup}
+                onOpenFeedbackPopup={onOpenFeedbackPopup}
+                onClose={onClose}
+              />
+            </div>
           ))}
       </div>
       <div className="feedback__buttons">

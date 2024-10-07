@@ -1,6 +1,5 @@
 import "./PopupWithForm.css";
-import { useFormWithValidation } from "../../hoocks/validation";
-import { REGEX_EMAIL, REGEX_NAME_RU } from "../../mocks/constatnts";
+import { useFormWithValidation } from "../../../hoocks/validation";
 
 function PopupWithForm(props) {
   const { isOpen, onClose, handleAddFeedback } = props;
@@ -41,7 +40,7 @@ function PopupWithForm(props) {
                   value={values.name || ""}
                   minLength={1}
                   maxLength={64}
-                  pattern={REGEX_NAME_RU}
+                  pattern="^(?:[а-яёА-ЯЁ]+)(?:[\-\s]{0,2})?(?:[а-яёА-ЯЁ]+)?$|^(?:[a-zA-Z]+)(?:[\-\s]{0,2})?(?:[a-zA-Z]+)?$"
                   required
                 ></input>
                 <span className="form__input_name-error form__input-error">
@@ -55,10 +54,10 @@ function PopupWithForm(props) {
                   className="form__input form__input_email"
                   placeholder="email@email.ru"
                   name="email"
+                  type="email"
                   minLength={5}
                   maxLength={50}
                   value={values.email || ""}
-                  pattern={REGEX_EMAIL}
                   required
                 ></input>
                 <span className="form__input_email-error form__input-error">

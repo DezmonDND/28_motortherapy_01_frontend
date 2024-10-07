@@ -4,14 +4,16 @@ import Footer from "./Footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound/NotFound";
 import Main from "./Main/Main";
-import PopupWithForm from "./PopupWithForm/PopupWithForm";
 import { useState } from "react";
-import PopupWithFeedback from "./PopupWithFeedback/PopupWithFeedback";
 import { EVENTS, FEEDBACKS, FRIENDS } from "../mocks/user-data";
-import PopupWithFriends from "./PopupWithFriends/PopupWithFriends";
-import PopupWithEvents from "./PopupWithEvents/PopupWithEvents";
 import { useEffect } from "react";
 import { api } from "../utils/api";
+// Popups
+import PopupWithForm from "./Popups/PopupWithForm/PopupWithForm";
+import PopupWithFeedback from "./Popups/PopupWithFeedback/PopupWithFeedback";
+import PopupWithFriends from "./Popups/PopupWithFriends/PopupWithFriends";
+import PopupWithEvents from "./Popups/PopupWithEvents/PopupWithEvents";
+import SuccessPopup from "./Popups/SuccessPopup/SuccessPopup";
 
 function App() {
   // const [events, setEvents] = useState(EVENTS);
@@ -24,12 +26,14 @@ function App() {
   const [isPopupEventsOpen, setIsEventsPopupOpen] = useState(false);
   const [isFeedbackPopupOpen, setIsFeedbackPopupOpen] = useState(false);
   const [isPopupFriendsOpen, setIsPopupFriendsOpen] = useState(false);
+  const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
     Promise.all([api.getEvents(), api.getFeedbacks()])
       .then(([events, feddbacks]) => {
-        setEvents(events.results);
-        setFeedbacks(feddbacks.results);
+        setEvents(events);
+        setFeedbacks(feddbacks);
       })
       .catch((e) => {
         console.log(e);
@@ -79,6 +83,7 @@ function App() {
     setIsFeedbackPopupOpen(false);
     setIsPopupFriendsOpen(false);
     setIsEventsPopupOpen(false);
+    setIsSuccessPopupOpen(false);
   }
 
   return (
@@ -98,6 +103,8 @@ function App() {
               onOpenEventsPopup={handleOpenEventsPopup}
               onClose={closePopup}
               handleAddContact={handleAddContact}
+              setIsSuccessPopupOpen={setIsSuccessPopupOpen}
+              setIsSuccess={setIsSuccess}
             ></Main>
           }
         ></Route>
@@ -124,6 +131,11 @@ function App() {
         isOpen={isPopupEventsOpen}
         onClose={closePopup}
       ></PopupWithEvents>
+      <SuccessPopup
+        isSuccess={isSuccess}
+        isOpen={isSuccessPopupOpen}
+        onClose={closePopup}
+      ></SuccessPopup>
     </>
   );
 }

@@ -70,35 +70,39 @@ function Events(props) {
       <div className="events__content">
         <Slider {...settings}>
           {events.map((event) => (
-            <div
-              className="events__block"
-              key={event.id}
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <img src={event.preview} alt="slide-1" className="events__icon" />
-              <p className="events__date">{convertDate(event.date)}</p>
-              <p className="events__name">{event.title}</p>
-              <button
-                value={event}
-                onClick={() =>
-                  handleOpenModal({
-                    date: convertDate(event.date),
-                    name: event.title,
-                    icon: event.preview,
-                    text: event.description,
-                    link: event.link,
-                    photo: event.photos,
-                  })
-                }
-                className="events__link"
+              <div
+                className="events__block"
+                key={event.pk}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
               >
-                Смотреть
-              </button>
-            </div>
-          ))}
+                <img
+                  src={event.preview}
+                  alt="slide-1"
+                  className="events__icon"
+                />
+                <p className="events__date">{convertDate(event.date)}</p>
+                <p className="events__name">{event.title}</p>
+                <button
+                  value={event}
+                  onClick={() =>
+                    handleOpenModal({
+                      date: convertDate(event.date),
+                      name: event.title,
+                      icon: event.preview,
+                      text: event.description,
+                      link: event.link,
+                      photo: event.photos,
+                    })
+                  }
+                  className="events__link"
+                >
+                  Смотреть
+                </button>
+              </div>
+            ))}
         </Slider>
       </div>
       {modal && <Modal info={modalInfo} onClose={handleCloseModal} />}

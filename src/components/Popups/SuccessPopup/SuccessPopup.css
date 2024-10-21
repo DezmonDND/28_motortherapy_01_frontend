@@ -1,0 +1,47 @@
+.success__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  width: 100%;
+  gap: 20px;
+}
+
+.success__button {
+  all: unset;
+  display: flex;
+  align-self: flex-end;
+  background-image: url(../../../assets/images/close-button.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+}
+
+.success_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border: 2px solid rgba(15, 218, 206, 0.25);
+  border-radius: 10px;
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.success__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.success__iamge {
+  max-width: 100px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.success__text {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 500;
+}

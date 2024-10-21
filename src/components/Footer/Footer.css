@@ -27,6 +27,11 @@
   width: 40px;
 }
 
+.footer__icon:hover {
+  opacity: .5;
+  transition: 0.8s;
+}
+
 .footer__socials {
   display: flex;
   gap: 16px;

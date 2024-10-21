@@ -14,7 +14,6 @@ function Modal({ info, onClose }) {
       <React.Fragment key={index}>
         {item}
         <br />
-        <br />
       </React.Fragment>
     ));
   };
@@ -66,19 +65,15 @@ function Modal({ info, onClose }) {
         </button>
         <h2 className="modal__title">{info.name}</h2>
         <div className="modal__container">
-          <iframe
+          <video
             className="modal__video"
             width="645"
-            height="409"
+            controls
             src={info.link}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          ></video>
           <Slider {...settings} className="modal__slider">
             {info.photo.map((photo) => (
-              <div>
+              <div key={photo.link}>
                 <img
                   className="modal__slide"
                   src={photo.link}

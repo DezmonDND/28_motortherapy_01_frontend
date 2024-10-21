@@ -44,14 +44,19 @@ function Feedbacks(props) {
       <h2 className="feedback__title">Отзывы о нас</h2>
       <div className="feedback__container">
         {feedbacks.length !== 0 &&
-          feedbacksList.map((feedback) => (
-            <Feedback
-              feedback={feedback}
-              onOpenAddFeedbackPopup={onOpenAddFeedbackPopup}
-              onOpenFeedbackPopup={onOpenFeedbackPopup}
-              onClose={onClose}
-            />
-          ))}
+          feedbacksList.map(
+            (feedback) =>
+              feedback.is_published === true && (
+                <div key={feedback.author_name}>
+                  <Feedback
+                    feedback={feedback}
+                    onOpenAddFeedbackPopup={onOpenAddFeedbackPopup}
+                    onOpenFeedbackPopup={onOpenFeedbackPopup}
+                    onClose={onClose}
+                  />
+                </div>
+              )
+          )}
       </div>
       <div className="feedback__buttons">
         {feedbacks.length > 6 && (

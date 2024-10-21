@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
-import { EVENTS } from "../../mocks/user-data";
 
-function Events() {
+function Events(props) {
   const [modal, setModal] = useState(false);
   const [modalInfo, setModalInfo] = useState({});
+  const { events, onOpenEventsPopup } = props;
 
   const settings = {
     dots: true,
@@ -56,34 +56,41 @@ function Events() {
     setModal(false);
   };
 
+  function convertDate(data) {
+    const date = new Date(data);
+    return date.toLocaleDateString();
+  }
+
   return (
     <section className="events" id="events">
       <h2 className="events__title">Мероприятия</h2>
-      <button className="events__button">Смотреть все</button>
+      <button className="events__button" onClick={onOpenEventsPopup}>
+        Смотреть все
+      </button>
       <div className="events__content">
         <Slider {...settings}>
-          {EVENTS.map((event) => (
+          {events.map((event) => (
             <div
               className="events__block"
-              key={event.id}
+              key={event.pk}
               style={{
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <img src={event.icon} alt="slide-1" className="events__icon" />
-              <p className="events__date">{event.date}</p>
+              <img src={event.preview} alt="slide-1" className="events__icon" />
+              <p className="events__date">{convertDate(event.date)}</p>
               <p className="events__name">{event.title}</p>
               <button
                 value={event}
                 onClick={() =>
                   handleOpenModal({
-                    date: event.date,
+                    date: convertDate(event.date),
                     name: event.title,
-                    icon: event.icon,
-                    text: event.text,
+                    icon: event.preview,
+                    text: event.description,
                     link: event.link,
-                    photo: event.photo,
+                    photo: event.photos,
                   })
                 }
                 className="events__link"

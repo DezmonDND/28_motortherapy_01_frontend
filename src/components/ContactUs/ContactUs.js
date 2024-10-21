@@ -1,19 +1,43 @@
+/*eslint-disable*/
 import "./ContactUs.css";
 import { useFormWithValidation } from "../../hoocks/validation";
-import { REGEX_EMAIL, REGEX_NAME, REGEX_PHONE } from "../../mocks/constatnts";
+import { api } from "../../utils/api";
 
-function ContactUs() {
-  const { values, errors, isValid, handleChange } = useFormWithValidation();
+function ContactUs(props) {
+  const { values, errors, isValid, handleChange, setValues, setIsValid } =
+    useFormWithValidation();
+  const { setIsSuccessPopupOpen, setIsSuccess } = props;
+
+  function handleAddContact(values) {
+    api
+      .contactUs(values)
+      .then((res) => {
+        setIsSuccess(true);
+      })
+      .catch((e) => {
+        setIsSuccess(false);
+        console.log(e);
+      });
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
+    setIsSuccessPopupOpen(true);
+    handleAddContact(values);
+    setValues({});
+    setIsValid(false);
   }
 
   return (
     <section className="contactUs" id="contactUs">
       <div className="contactUs__container">
         <h2 className="contactUs__title">Связаться с нами</h2>
-        <form className="contactUs__form" onSubmit={handleSubmit} noValidate>
+        <form
+          className="contactUs__form"
+          onSubmit={handleSubmit}
+          noValidate
+          id="contactForm"
+        >
           <div className="form__content">
             <div className="form__data">
               <div className="form__block">
@@ -24,13 +48,14 @@ function ContactUs() {
                   placeholder="Введите имя"
                   name="name"
                   value={values.name || ""}
-                  minLength={2}
-                  maxLength={30}
-                  pattern={REGEX_NAME}
+                  minLength={1}
+                  maxLength={64}
+                  pattern="^(?:[а-яёА-ЯЁ]+)(?:[\-\s]{0,2})?(?:[а-яёА-ЯЁ]+)?$|^(?:[a-zA-Z]+)(?:[\-\s]{0,2})?(?:[a-zA-Z]+)?$"
                   required
                 ></input>
                 <span className="form__input_name-error form__input-error">
-                  {errors.name}
+                  {errors.name &&
+                    "Разрешены латиница или кириллица и не более двух пробелов. Смешивание запрещено."}
                 </span>
               </div>
               <div className="form__block">
@@ -38,15 +63,15 @@ function ContactUs() {
                 <input
                   onChange={handleChange}
                   className="form__input form__input_phone"
-                  placeholder="7-900-000-0000"
+                  placeholder="+79009009090"
                   value={values.phone || ""}
                   name="phone"
-                  type="phone"
-                  pattern={REGEX_PHONE}
+                  pattern="^\+?(7|8)?\d{10}$"
                   required
                 ></input>
                 <span className="form__input_phone-error form__input-error">
-                  {errors.phone}
+                  {errors.phone &&
+                    "Неверный формат номера. Допустимы номера, начинающиеся с +7 или 8"}
                 </span>
               </div>
               <div className="form__block">
@@ -56,10 +81,10 @@ function ContactUs() {
                   className="form__input form__input_email"
                   placeholder="email@email.ru"
                   name="email"
+                  type="email"
                   minLength={5}
                   maxLength={50}
                   value={values.email || ""}
-                  pattern={REGEX_EMAIL}
                   required
                 ></input>
                 <span className="form__input_email-error form__input-error">
@@ -71,11 +96,12 @@ function ContactUs() {
               <label className="form__input-name">Комментарий:</label>
               <textarea
                 onChange={handleChange}
-                className="form__comment form__input_comment"
+                className="form__comment form__input_comment form__placeholder"
                 placeholder="Оставьте свой комментарий..."
                 name="comment"
-                minLength={2}
+                minLength={1}
                 maxLength={1000}
+                value={values.comment || ""}
                 required
               ></textarea>
               <span className="form__input_comment-error">

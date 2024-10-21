@@ -9,8 +9,19 @@ import Promo from "../Promo/Promo";
 import Feedbacks from "../Feedbacks/Feedbacks";
 
 function Main(props) {
-  const { onOpenAddFeedbackPopup, onOpenFeedbackPopup, onClose, feedbacks } =
-    props;
+  const {
+    onOpenAddFeedbackPopup,
+    onOpenFeedbackPopup,
+    onOpenFriendsPopup,
+    onOpenEventsPopup,
+    onClose,
+    events,
+    feedbacks,
+    friends,
+    handleAddContact,
+    setIsSuccessPopupOpen,
+    setIsSuccess
+  } = props;
 
   return (
     <>
@@ -18,16 +29,24 @@ function Main(props) {
         <Promo />
         <AboutUs />
         <OurAchievements />
-        <Events />
+        <Events events={events} onOpenEventsPopup={onOpenEventsPopup} />
         <Feedbacks
           feedbacks={feedbacks}
           onOpenAddFeedbackPopup={onOpenAddFeedbackPopup}
           onOpenFeedbackPopup={onOpenFeedbackPopup}
           onClose={onClose}
         ></Feedbacks>
-        <ContactUs />
+        <ContactUs
+          handleAddContact={handleAddContact}
+          setIsSuccessPopupOpen={setIsSuccessPopupOpen}
+          setIsSuccess={setIsSuccess}
+        />
         <HelpUs />
-        <Friends />
+        <Friends
+          friends={friends}
+          onOpenFriendsPopup={onOpenFriendsPopup}
+          onClose={onClose}
+        />
       </main>
     </>
   );

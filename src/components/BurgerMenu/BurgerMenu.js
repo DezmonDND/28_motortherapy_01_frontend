@@ -40,7 +40,7 @@ function BurgerMenu(props) {
             target="newBlank"
           >
             <img
-              classList="burger__social-icon"
+              className="burger__social-icon"
               src={VkIcon}
               alt="Icon"
               style={{
@@ -50,7 +50,7 @@ function BurgerMenu(props) {
           </a>
           <a href="/" className="burger__social-link" target="newBlank">
             <img
-              classList="burger__social-icon"
+              className="burger__social-icon"
               src={WhatsUpIcon}
               alt="Icon"
               style={{
@@ -60,7 +60,7 @@ function BurgerMenu(props) {
           </a>
           <a href="/" className="burger__social-link" target="newBlank">
             <img
-              classList="burger__social-icon"
+              className="burger__social-icon"
               src={TgIcon}
               alt="Icon"
               style={{

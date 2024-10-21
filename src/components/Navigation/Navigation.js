@@ -12,7 +12,7 @@ function Navigation() {
         <HashLink to="#events" className="navigation__item">
           Мероприятия
         </HashLink>
-        <HashLink to="#contactUs" className="navigation__item">
+        <HashLink to="#footer" className="navigation__item">
           Контакты
         </HashLink>
         <HashLink to="#helpUs" className="navigation__item">

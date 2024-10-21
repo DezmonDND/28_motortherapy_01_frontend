@@ -41,3 +41,6 @@ npm start
 ```
 Проект откроется в дефолтном браузере.
 
+<div align="center">
+  <img src="https://github.com/DezmonDND/28_motortherapy_01_frontend/blob/main/preview.png?raw=true" alt="Превью's custom image" />
+</div>
